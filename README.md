@@ -7,3 +7,11 @@ Links:
     http://localhost:3092/  
     http://localhost:3092/welcome
 ```
+#### 2 - spring-boot-view-JSP-File-1
+How to use and view jsp file on spring boot
+``` 
+Links: 
+http://localhost:8182/personels
+```
+
+
