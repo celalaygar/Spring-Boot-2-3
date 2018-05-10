@@ -11,6 +11,7 @@ Links:
 How to use and view jsp file on spring boot
 ``` 
 Links: 
+http://localhost:8182/
 http://localhost:8182/personels
 ```
 
