@@ -1,7 +1,7 @@
 ### spring-boot-experiments-
 
 #### 1 - spring-boot-HelloWorld
-how to run. look at application.properties. port number is there. 
+how to run project. Look at application.properties where Port number is there. 
 ``` 
 Links: 
     http://localhost:3092/  
