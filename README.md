@@ -4,15 +4,13 @@
 how to run project. Look at application.properties where Port number is there. 
 ``` 
 Links: 
-    http://localhost:3092/  
-    http://localhost:3092/welcome
+    http://localhost:3092/    http://localhost:3092/welcome
 ```
 #### 2 - spring-boot-view-JSP-File-1
 How to use and view jsp file on spring boot
 ``` 
 Links: 
-http://localhost:8182/
-http://localhost:8182/personels
+http://localhost:8182/    http://localhost:8182/personels
 ```
 #### 3 - spring-boot-view-Error-Page
 How to use and view Error page on spring boot
