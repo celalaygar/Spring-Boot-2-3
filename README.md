@@ -14,7 +14,7 @@ http://localhost:8182/    http://localhost:8182/personels
 ```
 #### 3 - spring-boot-view-Error-Page
 How to use and view Error page on spring boot
-you can writer anylink  except bottom links
+you can writer anylink  except bottom links. don't forget you have to add to src/main/resources/public/error 404.html (error page)  
 ``` 
 Links: 
 http://localhost:8182/    http://localhost:8182/personels
