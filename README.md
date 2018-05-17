@@ -27,4 +27,4 @@ http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/den
 
 #### 4 - springboot-(REST_API_QUERY)
 how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET
-###### you can experiment on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/)  with JUNİT
+###### you can experiment  with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
