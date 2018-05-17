@@ -1,5 +1,6 @@
 package com.javaegitimleri.app.web;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.javaegitimleri.app.exception.OwnerNotFoundException;
 import com.javaegitimleri.app.model.Personel;
@@ -40,14 +42,25 @@ public class PersonelClinicRestController {
 			return ResponseEntity.ok().build();
 			
 		} catch (OwnerNotFoundException e) {
-			return ResponseEntity.notFound().build();
+			throw e;
+			
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 	} 
 	
-	
-	
+	@RequestMapping(method = RequestMethod.POST, value = "/personel")
+	public ResponseEntity<URI> createPersonel(@RequestBody Personel personel) {
+		try {
+			appService.createPersonel(personel);
+			Long id = personel.getId();
+			URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();
+			return ResponseEntity.created(location).build();
+		} catch (Exception ex) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+	}
+
 	// update personel
 	@RequestMapping(method=RequestMethod.PUT,value="/personel/{id}")
 	public ResponseEntity<List<Personel>> updatePersonels(@PathVariable("id") Long id, @RequestBody Personel personel){

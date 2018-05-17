@@ -40,6 +40,7 @@ public class PersonelClinicRestControllerTest {
 		
 	}
 	
+
 	@Test
 	public void updatePersonelTest() {
 		Personel p=restTemplate.getForObject("http://localhost:8182/rest/personel/2", Personel.class);
