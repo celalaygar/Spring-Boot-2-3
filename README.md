@@ -25,4 +25,5 @@ http://localhost:8182/deneme       http://localhost:8182/asd
 http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/deneme.jsp
 ```
 
- 
+#### 4 - springboot-(REST_API_QUERY)
+how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET
