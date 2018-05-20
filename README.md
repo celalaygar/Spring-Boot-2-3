@@ -30,14 +30,14 @@ how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and Reque
 ###### you can experiment  with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
 ```   
 you can try runnuing the methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
-then you can look at changing data on localhost:8182/rest/personels
+Then you can look at changing data on localhost:8182/rest/personels
 ``` 
 
 #### 5 - springboot-with-h2-database (REST_API_QUERY) 
 how to use h2 database.
 ```  
 you can try runnuing deletePersonelTest method with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
-then you can look at changing data on localhost:8182/rest/personels
+Then you can look at changing data on localhost:8182/rest/personels
 ``` 
 how to create schema, table and add data in table
 ###### you can look src/main/resources/ data.sql & schema.sql 
