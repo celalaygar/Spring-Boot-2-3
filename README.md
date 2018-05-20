@@ -1,5 +1,11 @@
 ### spring-boot-experiments-
 
+##### you can change port number in all project. 
+how to change : look at in application.properties ( src/main/resources/application.properties ). you can change port number in applicaton.properties
+``` 
+server.port=8182
+``` 
+
 #### 1 - spring-boot-HelloWorld
 how to run project. Look at application.properties where Port number is there. 
 ``` 
