@@ -28,3 +28,22 @@ http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/den
 #### 4 - springboot-(REST_API_QUERY)
 how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET
 ###### you can experiment  with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
+
+#### 5 - springboot-with-h2-database (REST_API_QUERY) 
+how to use h2 database.
+######  you can try runnuing deletePersonelTest method with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java
+how to create schema, table and add data in table
+###### you can look src/main/resources/ data.sql & schema.sql 
+
+``` 
+you have to add dependencies in pom.xml if you want to use h2 database with rest_api
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+``` 
