@@ -28,6 +28,7 @@ http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/den
 #### 4 - springboot-(REST_API_QUERY)
 how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET
 ###### you can experiment  with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
+######  you can try runnuing the methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java
 
 #### 5 - springboot-with-h2-database (REST_API_QUERY) 
 how to use h2 database.
