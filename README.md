@@ -37,7 +37,7 @@ how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and Reque
 
 you can experiment  with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
 ```   
-you can try runnuing the methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
+You can try runnuing the methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
 Then you can look at changing data on localhost:8182/rest/personels
 ``` 
 
@@ -46,7 +46,7 @@ how to create schema, table and add data in table you can look src/main/resource
 
 how to use h2 database.
 ```  
-you can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test 
+You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test 
 in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
 Also Then you can look at changing data on localhost:8182/rest/personels
 ``` 
