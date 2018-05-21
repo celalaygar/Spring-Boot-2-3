@@ -62,6 +62,6 @@ Also
 ```  
 You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test 
 in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
-Also Then you can look at changing data on localhost:8182/rest/personels
+Then you can look at changing data on localhost:8182/rest/personels
 ``` 
 
