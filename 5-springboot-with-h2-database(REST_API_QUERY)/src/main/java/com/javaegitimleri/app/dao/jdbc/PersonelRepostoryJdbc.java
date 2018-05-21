@@ -71,9 +71,11 @@ public class PersonelRepostoryJdbc implements PersonelRepository {
 
 	@Override
 	public Personel update(Personel personel) {
-		String sql="update p_personel set first_name = ? where id = ?";
-		jdbctemplate.update(sql, personel.getFirstname(),personel.getId());
-		return personel;
+		//String sql="update p_personel set first_name = ? where id = ?";
+		//jdbctemplate.update(sql, personel.getFirstname(),personel.getId());
+		//return personel;
+		return null;
+		
 	}
 
 	@Override
