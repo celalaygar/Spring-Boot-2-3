@@ -46,7 +46,7 @@ public class PersonelClinicRestControllerTest {
 	public void updatePersonelTest() {
 		Personel p=restTemplate.getForObject("http://localhost:8182/rest/personel/2", Personel.class);
 		MatcherAssert.assertThat(p.getFirstname(), Matchers.equalTo("Celal"));
-		p.setFirstname("Haci Celal");
+		p.setFirstname("Haci");
 		restTemplate.put("http://localhost:8182/rest/personel/2", p);
 		p=restTemplate.getForObject("http://localhost:8182/rest/personel/2", Personel.class);
 		MatcherAssert.assertThat(p.getFirstname(), Matchers.equalTo("Haci Celal"));
@@ -59,12 +59,13 @@ public class PersonelClinicRestControllerTest {
 		Personel p=new Personel();
 		p.setFirstname("Cemal");
 		p.setLastname("Sayman");
-		p.setId(8L);
+		p.setId(12L);
 		URI location=restTemplate.postForLocation("http://localhost:8182/rest/personel", p);
 		Personel p2=restTemplate.getForObject(location, Personel.class);
 		MatcherAssert.assertThat(p2.getFirstname(), Matchers.equalTo(p.getFirstname()));
 		MatcherAssert.assertThat(p2.getLastname(), Matchers.equalTo(p.getLastname()));
 	}
+	
 	@Test
 	public void testGetPersonelById() {
 		ResponseEntity<Personel> response=  restTemplate.getForEntity("http://localhost:8182/rest/personel/1", Personel.class);

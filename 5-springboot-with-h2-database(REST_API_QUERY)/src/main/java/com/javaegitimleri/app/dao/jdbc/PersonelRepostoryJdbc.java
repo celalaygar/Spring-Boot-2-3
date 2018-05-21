@@ -47,9 +47,6 @@ public class PersonelRepostoryJdbc implements PersonelRepository {
 	@Override
 	public List<Personel> findAll() {
 		String sql="select * from p_personel";
-		
-		
-		
 		return jdbctemplate.query(sql, rowMapper);
 	}
 
@@ -67,14 +64,16 @@ public class PersonelRepostoryJdbc implements PersonelRepository {
 
 	@Override
 	public void create(Personel personel) {
-		// TODO Auto-generated method stub
+		String sql="INSERT INTO p_personel (id,first_name,last_name) VALUES(?,?,?)";
+		jdbctemplate.update(sql, personel.getId(),personel.getFirstname(),personel.getLastname());
 
 	}
 
 	@Override
 	public Personel update(Personel personel) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql="update p_personel set first_name = ? where id = ?";
+		jdbctemplate.update(sql, personel.getFirstname(),personel.getId());
+		return personel;
 	}
 
 	@Override
