@@ -58,10 +58,6 @@ First You have to add dependencies in pom.xml if you want to use h2 database wit
     <scope>runtime</scope>
 </dependency>
 ``` 
-Also
-```  
-You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test 
-in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
-Then you can look at changing data on localhost:8182/rest/personels
-``` 
+Also You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. Then you can look at changing data on localhost:8182/rest/personels
+ 
 
