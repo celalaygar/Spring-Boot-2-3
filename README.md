@@ -48,16 +48,8 @@ how to use h2 database.
 
 First You have to add dependencies in pom.xml if you want to use h2 database with rest_api
 ``` 
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-jdbc</artifactId>
-</dependency>
-<dependency>
-    <groupId>com.h2database</groupId>
-    <artifactId>h2</artifactId>
-    <scope>runtime</scope>
-</dependency>
-``` 
-Also You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java.
+Also You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test 
+in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java.
  
+``` 
 
