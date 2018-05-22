@@ -46,7 +46,6 @@ how to create schema, table and add data in table you can look src/main/resource
 
 how to use h2 database.
 
-First You have to add dependencies in pom.xml if you want to use h2 database with rest_api
 ``` 
 Also You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test 
 in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java.
