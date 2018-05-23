@@ -1,0 +1,16 @@
+body {
+	background: #ccc;
+}
+
+h3 {
+	color: red
+}
+
+.deneme {
+	background: #333;
+	padding: 10px;
+	border-radius: 10px; 
+	color : lightblue;
+	height: 50px;
+	color: lightblue;
+}
