@@ -41,7 +41,7 @@ Then you can look at changing data on localhost:8182/rest/personels
 ``` 
 
 #### 5 - springboot-with-h2-database (REST_API_QUERY) 
-how to create schema, table and add data in table you can look src/main/resources/ data.sql & schema.sql.<br/>
+how to create schema, table and add data in table. you can look src/main/resources/ data.sql & schema.sql.<br/>
 how to use h2 database.
 
 ``` 
