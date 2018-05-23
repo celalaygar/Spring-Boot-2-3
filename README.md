@@ -19,8 +19,8 @@ Links:
 http://localhost:8182/    http://localhost:8182/personels
 ```
 #### 3 - spring-boot-view-Error-Page
-How to use and view Error page on spring boot
-you can writer anylink  except bottom links. don't forget you have to add to src/main/resources/public/error 404.html (error page)  
+How to use and view Error page on spring boot<br/>
+you can writer anylink  except bottom links. you have to add to src/main/resources/public/error 404.html (error page)  
 
 if you write one of bottom links, you can't see error page as error.html
 ``` 
@@ -33,17 +33,15 @@ http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/den
 ```
 
 #### 4 - springboot-(REST_API_QUERY)
-how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET
-
-you can experiment  with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
+how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET<br/>
+you can experiment with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
 ```   
 You can try runnuing the methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
 Then you can look at changing data on localhost:8182/rest/personels
 ``` 
 
 #### 5 - springboot-with-h2-database (REST_API_QUERY) 
-how to create schema, table and add data in table you can look src/main/resources/ data.sql & schema.sql.
-
+how to create schema, table and add data in table you can look src/main/resources/ data.sql & schema.sql.<br/>
 how to use h2 database.
 
 ``` 
@@ -52,7 +50,5 @@ in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.jav
  
 ``` 
 
-#### 6 - springboot-jpa-with-h2-database (REST_API_QUERY) 
-how to use jpa with h2 database<br/>
-how to use jpa with h2 database\n
+#### 6 - springboot-jpa-with-h2-database (REST_API_QUERY)
 how to use jpa with h2 database<br/>
