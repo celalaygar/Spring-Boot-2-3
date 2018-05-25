@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: ceecece
+Build-Jdk: 10.0.1
+Implementation-Title: personel
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.javaegitimleri
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/personel
+Created-By: Maven Integration for Eclipse
+
