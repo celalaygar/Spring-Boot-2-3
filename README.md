@@ -45,3 +45,13 @@ in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.jav
 #### 6 - springboot-jpa-with-h2-database (REST_API_QUERY)
 how to use jpa with h2 database<br/>
 how to use @Transactional, @Id, @GeneratedValue, @Entity, @Table @Column
+#### 7 - springboot-simple-security-example
+how to use login and logout procedure<br/>
+look at application.properties file in src/main/resources/...
+``` 
+#you can change username and password. then you can try login proccessing
+spring.security.user.name=celal
+spring.security.user.password=123456
+``` 
+ 
+
