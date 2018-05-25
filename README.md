@@ -47,7 +47,7 @@ how to use jpa with h2 database<br/>
 how to use @Transactional, @Id, @GeneratedValue, @Entity, @Table @Column
 #### 7 - springboot-simple-security-example
 how to use login and logout procedure<br/>
-first you have to add spring-boot-starter-security dependency file in pom.xml. <br/>
+First you have to add spring-boot-starter-security dependency file in pom.xml. <br/>
 look at application.properties file in src/main/resources/...
 ``` 
 #you can change username and password. then you can try login proccessing
