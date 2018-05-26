@@ -16,6 +16,13 @@ public class MainController {
 	@Autowired
 	private AppService appservice;
 	
+	@RequestMapping("/login.html")
+	public ModelAndView getLoginPage() {
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("messages", "Hello! .. This is Login Page");
+		mav.setViewName("login");
+		return mav;
+	}
 	
 	@RequestMapping("/personels")
 	public ModelAndView getPersonel() {
@@ -26,11 +33,14 @@ public class MainController {
 		mav.setViewName("personels");
 		return mav;
 	}
+	
 	@RequestMapping("/")
 	public String mainPage() {
 		
 		return "main";
 	}
+	
+	
 	@RequestMapping("/welcome")
 	public String welcome() {
 		

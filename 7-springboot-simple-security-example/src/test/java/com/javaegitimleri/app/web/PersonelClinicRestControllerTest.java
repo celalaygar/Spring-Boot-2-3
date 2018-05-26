@@ -26,9 +26,8 @@ public class PersonelClinicRestControllerTest {
 	@Before
 	public void setup() {
 		restTemplate = new RestTemplate();
-		
-		
 	}
+	
 	@Test
 	public void deletePersonelTest() {
 		restTemplate.delete("http://localhost:8182/rest/personel/6");
