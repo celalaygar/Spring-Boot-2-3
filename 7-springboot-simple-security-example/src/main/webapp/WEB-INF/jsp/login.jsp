@@ -34,11 +34,14 @@
 							<td><input type="password" name="password" /></td>
 						</tr>
 						<tr>
+							<td>Remember Me</td>
+							<td><input type="checkbox" name="remember-me" /></td>
+						</tr>
+						<tr>
 							<td></td>
 							<td><input type="hidden" name="${_csrf.parameterName }"
 								value="${_csrf.token}" /></td>
 						</tr>
-
 						<tr>
 							<td><input type="submit"  value=" Logİn "  /></td>
 							<td><c:if test="${not empty param.loginFailed }">
@@ -47,21 +50,10 @@
 								</c:if></td>
 						</tr>
 					</form>
-
 				</table>
-
-
-
 			</div>
-
 		</div>
-
 	</div>
-
-
-
-
-
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
