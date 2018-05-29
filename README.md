@@ -51,6 +51,7 @@ how to use @Transactional, @Id, @GeneratedValue, @Entity, @Table @Column
 #### 7 - springboot-simple-security-example
 how to use login and logout procedure<br/>
 how to use specific login page <br/>
+how to use remember me for security login<br/>
 First you have to add spring-boot-starter-security dependency file in pom.xml. <br/>
 look at application.properties file in src/main/resources/...
 ``` 
