@@ -36,8 +36,7 @@ you can experiment with JUNİT on PersonelClinicRestControllerTest.java  (src/te
 You can try runnuing the methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
 Then you can look at changing data on localhost:8182/rest/personels
 ``` 
-#### 5 - springboot-with-h2-database (REST_API_QUERY) 
-###### (jdbc with h2 database) 
+#### 5 - springboot-with-h2-database (REST_API_QUERY)  (jdbc with h2 database)
 how to create schema, table and add data with jdbc in table. you can look src/main/resources/ data.sql & schema.sql.<br/>
 how to use h2 database with jdbc.
 ``` 
@@ -45,7 +44,6 @@ Also You can try runnuing createPersonelTest, deletePersonelTest methods with ru
 in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java.
 ``` 
 #### 6 - springboot-jpa-with-h2-database (REST_API_QUERY)
-###### (jap with h2 database)
 how to use jpa with h2 database<br/>
 how to use @Transactional, @Id, @GeneratedValue, @Entity, @Table @Column
 #### 7 - springboot-simple-security-example
