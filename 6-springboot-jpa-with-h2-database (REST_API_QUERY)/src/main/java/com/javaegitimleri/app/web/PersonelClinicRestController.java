@@ -46,6 +46,19 @@ public class PersonelClinicRestController {
 		}
 	} 
 	
+		//insert personel
+	@RequestMapping(method = RequestMethod.POST, value = "/personel")
+	public ResponseEntity<URI> createPersonel(@RequestBody Personel personel) {
+		try {
+			appService.createPersonel(personel);
+			Long id = personel.getId();
+			URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();
+			return ResponseEntity.created(location).build();
+		} catch (Exception ex) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+	}
+
 	
 	
 	// update personel
