@@ -57,4 +57,23 @@ look at application.properties file in src/main/resources/...
 spring.security.user.name=celal
 spring.security.user.password=123456
 ``` 
+#### 8 - SpringJPA-PostgreSQL-Example
 
+first step
+Open pdAdmin III, use SQL Editor and make a query to create customer table in database called Personels
+Also you can create any database called diffrent name.
+``` 
+CREATE TABLE customer(
+    id BIGINT PRIMARY KEY     NOT NULL,
+    firstname VARCHAR(20),
+    lastname VARCHAR(20)
+);
+``` 
+second step
+``` 
+you need to write localhost:8182/save.
+you can try writing bottom any link
+localhost:8182/findall
+localhost:8182/findbyid?id=3  
+localhost:8182/findbylastname?lastname=Terim
+``` 
