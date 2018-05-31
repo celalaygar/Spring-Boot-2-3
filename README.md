@@ -60,7 +60,7 @@ spring.security.user.password=123456
 #### 8 - SpringJPA-PostgreSQL-Example
 
 first step
-Open pdAdmin III, use SQL Editor and make a query to create customer table in database called Personels
+Open pdAdmin 4, use SQL Editor and make a query to create customer table in database called Personels
 Also you can create any database called diffrent name.
 ``` 
 CREATE TABLE customer(
