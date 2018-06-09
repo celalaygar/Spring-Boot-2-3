@@ -86,7 +86,7 @@ INSERT INTO USERS VALUES('user1','{noop}12345',TRUE);
 INSERT INTO USERS VALUES('user2','{noop}secrett',TRUE);
 INSERT INTO USERS VALUES('celal','{noop}secret',TRUE);
 ``` 
-you can change data below first-three sql queries instead of above sql queris in src/main/resources/data.sql
+you can write data below first-three sql queries instead of above sql queris in src/main/resources/data.sql
 ```    
 INSERT INTO USERS VALUES('user1','{bcrypt}$2a$10$FMQOTEUiRN1L2MV2gfYas.MEDnLcEffuenRme5WdFgkwcuWA2jyhG',TRUE);
 INSERT INTO USERS VALUES('user2','{bcrypt}$2a$10$.qPu/z1bV0Lw5uSpv6YMKeiCUI4rsxfNY/HJJBgw9E7CYUULMW3CS',TRUE);
