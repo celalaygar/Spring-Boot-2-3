@@ -71,7 +71,7 @@ CREATE TABLE customer(
 ``` 
 second step
 ``` 
-First you need to write localhost:8182/save.
+First you need to write localhost:8182/save
 Then you can try writing bottom any link
 localhost:8182/findall
 localhost:8182/findbyid?id=3  
