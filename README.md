@@ -33,7 +33,7 @@ http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/den
 how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET<br/>
 you can experiment with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
 ```   
-You can try runnuing the methods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
+You can try runnuing anymethods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
 Then you can look at changing data on localhost:8182/rest/personels
 ``` 
 #### 5 - springboot-with-h2-database (REST_API_QUERY)  (jdbc with h2 database)
