@@ -95,7 +95,7 @@ INSERT INTO USERS VALUES('celal','{bcrypt}$2a$10$m9RM8vLgWvu/8Ig21HURG.IHIeFEie8
 username and password will be same again when you changed first-three lines in src/main/resources/data.sql.<br/>
 for encrypted data you can look at PasswordEncoderTest.java class in src/test/com/javaegitimleri/ap/test
 
-for example (encrypted data) 
+for example (encrypted data) <br/>
 `12345` -> `{bcrypt}$2a$10$FMQOTEUiRN1L2MV2gfYas.MEDnLcEffuenRme5WdFgkwcuWA2jyhG`
 `secrett` -> `{bcrypt}$2a$10$.qPu/z1bV0Lw5uSpv6YMKeiCUI4rsxfNY/HJJBgw9E7CYUULMW3CS`
 
