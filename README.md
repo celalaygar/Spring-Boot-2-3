@@ -79,7 +79,7 @@ localhost:8182/findbylastname?lastname=Terim
 ``` 
  #### 9 - springboot-security-with-h2-example
 How to use login process<br/>
-Anybody has ROLE_EDITOR and ROLE_ADMIN can only enter links called /rest/** and /actuator/** for `AUTHORIZATION`
+Anybody has ROLE_EDITOR or ROLE_ADMIN can only enter links called /rest/** and /actuator/** for `AUTHORIZATION`
 - `links` -> `localhost:8182/rest/personels`, `localhost:8182/rest/personel/3`, `localhost:8182/rest/personel?fn=Celal`
 - `links` -> `localhost:8182/actuator/health`
 ``` 
