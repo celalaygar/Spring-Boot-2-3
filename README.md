@@ -112,7 +112,7 @@ CREATE TABLE customer(
     lastname VARCHAR(20)
 );
 ``` 
-you can look at below sample links.
+you can try below sample links.
 ``` 
 localhost:8182/                 localhost:8182/customers          localhost:8182/customer/1
 localhost:8182/rest/customers   localhost:8182/rest/customer/1 
