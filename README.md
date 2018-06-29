@@ -77,7 +77,7 @@ localhost:8182/findall
 localhost:8182/findbyid?id=3  
 localhost:8182/findbylastname?lastname=Terim
 ``` 
- #### 9 - springboot-security-with-h2-example
+#### 9 - springboot-security-with-h2-example
 How to use login process<br/>
 Anybody has ROLE_EDITOR or ROLE_ADMIN can enter links called /rest/** and /actuator/** for `AUTHORIZATION`.Anybody only has ROL_USER can't enter links called /rest/** and /actuator/**
 - `links` -> `localhost:8182/rest/personels`, `localhost:8182/rest/personel/3`, `localhost:8182/rest/personel?fn=Celal`
@@ -101,3 +101,14 @@ for example (encrypted data)
 - `secrett` -> `{bcrypt}$2a$10$.qPu/z1bV0Lw5uSpv6YMKeiCUI4rsxfNY/HJJBgw9E7CYUULMW3CS`
 - `secret` -> `{bcrypt}$2a$10$m9RM8vLgWvu/8Ig21HURG.IHIeFEie8CsKaGV1FeQ88bi27Xz4wJS`
 
+
+#### Spring-Boot-10-JPA-PostgreSQL-CRUD-RESTful Services-And-Jsp
+how to use postgresql with jpa for CRUD for RESTful and jsp file.<br/>
+Open pdAdmin 4, use SQL Editor and make a query to create customer table in database called Personels.Also you can create any database called diffrent name.
+``` 
+CREATE TABLE customer(
+    id BIGINT PRIMARY KEY     NOT NULL,
+    firstname VARCHAR(20),
+    lastname VARCHAR(20)
+);
+``` 
