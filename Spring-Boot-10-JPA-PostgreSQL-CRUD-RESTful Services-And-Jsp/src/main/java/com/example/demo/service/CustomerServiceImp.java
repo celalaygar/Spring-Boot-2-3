@@ -34,7 +34,6 @@ public class CustomerServiceImp implements CustomerService {
 	@Override
 	public List<Customer> findallCustomers() {
 		//return CustomerReallyRepository.findallCustomers();
-		
 		return customerJpaRepository.findAll(new Sort(Sort.Direction.ASC, "id"));
 
 	}
@@ -44,11 +43,9 @@ public class CustomerServiceImp implements CustomerService {
 	}
 	
 	public void UpdatedCustomer(Long id, Customer customer) {
-		
 		Optional<Customer> optionalCustomer= customerJpaRepository.findById(id);
 		customer.setId(id);
 		customerJpaRepository.save(customer);
-		
 	}
 	
 	@Override
