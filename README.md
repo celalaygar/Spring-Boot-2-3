@@ -115,8 +115,8 @@ localhost:8182/                 localhost:8182/customers          localhost:8182
 localhost:8182/rest/customers   localhost:8182/rest/customer/1 
 ``` 
 ### 11 - SpringBoot-11-SpringData-1-JPA-PostgreSQL
-how to use @OneToOne, @JoinColumn, @JsonIgnore for spring boot and data in multiple database
-first one : create bottom table any on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
+how to use @OneToOne, @JoinColumn, @JsonIgnore for spring boot and data in multiple database.<br/>
+first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
 ``` 
 CREATE TABLE customer(
     id BIGINT PRIMARY KEY     NOT NULL,
