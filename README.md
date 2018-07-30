@@ -114,7 +114,7 @@ you can try below sample links.
 localhost:8182/                 localhost:8182/customers          localhost:8182/customer/1
 localhost:8182/rest/customers   localhost:8182/rest/customer/1 
 ``` 
-### 11 - SpringBoot-11-SpringData-1-JPA-PostgreSQL
+### 11 - Spring-Boot-11-SpringData-1-JPA-PostgreSQL
 how to use @OneToOne, @JoinColumn, @JsonIgnore for spring boot and data in multiple database.<br/>
 first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
 ``` 
