@@ -99,7 +99,7 @@ for example (encrypted data)
 - `secrett` -> `{bcrypt}$2a$10$.qPu/z1bV0Lw5uSpv6YMKeiCUI4rsxfNY/HJJBgw9E7CYUULMW3CS`
 - `secret` -> `{bcrypt}$2a$10$m9RM8vLgWvu/8Ig21HURG.IHIeFEie8CsKaGV1FeQ88bi27Xz4wJS`
 
-### Spring-Boot-10-JPA-PostgreSQL-CRUD-RESTful Services-And-Jsp
+### 10 - Spring-Boot-10-JPA-PostgreSQL-CRUD-RESTful Services-And-Jsp
 how to use postgresql with jpa for CRUD for RESTful and jsp file. `create, read, update, delete` <br/>
 Open pdAdmin 4, use SQL Editor and make a query to create customer table in database called Personels.Also you can create any database called diffrent name.
 ``` 
@@ -114,7 +114,7 @@ you can try below sample links.
 localhost:8182/                 localhost:8182/customers          localhost:8182/customer/1
 localhost:8182/rest/customers   localhost:8182/rest/customer/1 
 ``` 
-### SpringBoot-11-SpringData-1-JPA-PostgreSQL
+### 11 - SpringBoot-11-SpringData-1-JPA-PostgreSQL
 how to use @OneToOne, @JoinColumn, @JsonIgnore for spring boot and data in multiple database
 first one : create bottom table any on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
 ``` 
