@@ -13,7 +13,5 @@ import com.example.demo.entity.Book;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-//	  @Query("SELECT b FROM book b WHERE b.customerid = :customerid")
-//	  List<Book> findByCustomerid(@Param("customerid") Long customer_id);
-	
+	  Book findByName(String name);
 }
