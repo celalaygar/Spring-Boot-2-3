@@ -115,7 +115,7 @@ localhost:8182/                 localhost:8182/customers          localhost:8182
 localhost:8182/rest/customers   localhost:8182/rest/customer/1 
 ``` 
 ### 11 - Spring-Boot-11-SpringData-1-JPA-PostgreSQL
-how to use @OneToOne, @JoinColumn, @JsonIgnore for spring boot and data in multiple database.<br/>
+how to use @OneToOne, @JoinColumn, @JsonIgnore for spring boot and data in multiple table.<br/>
 first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
 ``` 
 CREATE TABLE customer(
@@ -130,13 +130,32 @@ CREATE TABLE details(
     country VARCHAR(255),
     phone_number VARCHAR(255),
     customeid BIGINT,
-    FOREIGN KEY (customer_id) REFERENCES custoer (id)
+    FOREIGN KEY (customer_id) REFERENCES customer (id)
 );
 ``` 
 second one : Write localhost:8182/insert to insert data on database. then write other link
-``` . 
-such as 
-localhost:8182/details      localhost:8182/customers 
-localhost:8182/customer     localhost:8182/customerjson/{id}
+``` .  
+localhost:8182/details  localhost:8182/customers   localhost:8182/customers   localhost:8182/customer/{id}
+  localhost:8182/customerjson/{id}
+``` 
+### 12 - Spring-Boot-12-SpringData-2-JPA-PostgreSQL
+how to use @OneToMany,@ManyToOne for spring boot and data in multiple table.<br/>
+first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
+``` 
+CREATE TABLE customer(
+    id BIGINT PRIMARY KEY     NOT NULL,
+    name VARCHAR(255),
+    email VARCHAR(255)
+);
 
+CREATE TABLE book(
+    id BIGINT PRIMARY KEY  NOT NULL,
+    nae VARCHAR(255),
+    customeid BIGINT,
+    FOREIGN KEY (customer_id) REFERENCES customer (id)
+);
+``` 
+second one : Write localhost:8182/insert to insert data on database.
+``` . 
+localhost:8182/books    localhost:8182/book/{id}      localhost:8182/customers      localhost:8182/customer/{id}
 ``` 
