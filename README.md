@@ -157,5 +157,5 @@ CREATE TABLE book(
 ``` 
 second one : Write localhost:8182/insert to insert data on database.
 ``` . 
-localhost:8182/books    localhost:8182/book/{id}      localhost:8182/customers      localhost:8182/customer/{id}
+localhost:8182/books    localhost:8182/book/{id}   localhost:8182/customers   localhost:8182/customer/{id}
 ``` 
