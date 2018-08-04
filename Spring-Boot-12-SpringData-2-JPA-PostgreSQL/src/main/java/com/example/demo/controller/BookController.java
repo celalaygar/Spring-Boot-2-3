@@ -54,6 +54,7 @@ public final class BookController {
 	@GetMapping("/book_name/{name}")
 	public String booksByName(@PathVariable("name") String name) {
 		Book book = bookRepository.findByName(name);
+
 		return book.toString2();
 	}
 }

@@ -19,6 +19,7 @@ public class Customer {
 	@Column(name = "email")
 	private String email;
 
+	
 	// @JsonIgnore
 	// @OneToOne(mappedBy = "customer",cascade = CascadeType.ALL, fetch =
 	// FetchType.EAGER)

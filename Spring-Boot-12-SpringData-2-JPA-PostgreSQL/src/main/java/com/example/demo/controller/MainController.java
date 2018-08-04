@@ -22,6 +22,8 @@ public class MainController {
 	@Autowired
 	BookRepository bookRepository;
     
+	
+	
 	@RequestMapping("/")
 	@ResponseBody
 	public String hello() {
@@ -32,11 +34,11 @@ public class MainController {
 	@RequestMapping("/insert")
 	@ResponseBody
 	public String insert() {
-		Customer c1=new Customer("Kahraman" , "kahraman@gmail.com");
+		Customer c1=new Customer("Emrah" , "emrah@gmail.com");
 		Customer c2=new Customer("Ayla" , "ayla@gmail.com");
 		Customer c3=new Customer("Ebru Nur" , "ebrunur@gmail.com");
-		Book b1=new Book("Ali Bey Köy Hikayesi",c1);
-		Book b2=new Book("Kahve Masalı",c1);
+		Book b1=new Book("Ankara Hayatı",c1);
+		Book b2=new Book("Kahve Köşesi",c1);
 		
 		Book b3=new Book("Memleket İnsani",c2);
 		Book b4=new Book("Temel ile Dursun",c2);

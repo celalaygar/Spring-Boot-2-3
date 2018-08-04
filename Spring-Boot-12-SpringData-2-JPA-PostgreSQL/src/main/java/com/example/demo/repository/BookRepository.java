@@ -9,9 +9,12 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Book;
+import com.example.demo.entity.Customer;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-	  Book findByName(String name);
+//	  @Query("SELECT b FROM book b WHERE b.customerid = :customerid")
+	Book findByName(String name);
+	
 }
