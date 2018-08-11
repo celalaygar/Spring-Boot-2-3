@@ -143,7 +143,7 @@ how to use @OneToMany,@ManyToOne for spring boot and data in multiple table.<br/
 how to use specific sql query with @Query<br/>
 first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
 ``` 
-CREATE TABLE customer(
+CREATE TABLE car(
     id BIGINT PRIMARY KEY     NOT NULL,
     name VARCHAR(255),
     model INTEGER
