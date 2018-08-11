@@ -146,6 +146,11 @@ first one : create bottom table on any database called Users in pgAdmin 4.<br/> 
 CREATE TABLE customer(
     id BIGINT PRIMARY KEY     NOT NULL,
     name VARCHAR(255),
+    model INTEGER
+);
+CREATE TABLE customer(
+    id BIGINT PRIMARY KEY     NOT NULL,
+    name VARCHAR(255),
     email VARCHAR(255)
 );
 
