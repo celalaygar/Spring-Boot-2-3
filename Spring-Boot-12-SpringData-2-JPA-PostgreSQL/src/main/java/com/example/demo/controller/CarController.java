@@ -44,12 +44,31 @@ public class CarController {
 		return ResponseEntity.ok(cars);
 	}
 	
-	@Transactional(readOnly=true)
 	@GetMapping("/cars_1")
 	public ResponseEntity<List<Car>> FindAllCars_2() {
 		List<Car> cars=carRepository.findAllCars();
 		return ResponseEntity.ok(cars);
 	}
 	
+	@GetMapping("/car1/{id}")
+	public ResponseEntity<Car>FindCar_1Byid(@PathVariable Long id) {
+		Optional<Car> cars=carRepository.findById(id);
+		return ResponseEntity.ok(cars.get());
+	}
+	@GetMapping("/car2/{id}")
+	public ResponseEntity<Car>FindCar_2Byid(@PathVariable Long id) {
+		Car car=carRepository.findCarDataById(id);
+		return ResponseEntity.ok(car);
+	}
+	@GetMapping("/car_with_name/{name}")
+	public ResponseEntity<Car>FindCar_2Byname(@PathVariable String name) {
+		Car car=carRepository.findCarDataByname(name);
+		return ResponseEntity.ok(car);
+	}
 	
+	@GetMapping("/car_with_model/{model}")
+	public ResponseEntity<List<Car>>FindCar_2Byname(@PathVariable int model) {
+		List<Car> cars=carRepository.findCarDataBymodel(model);
+		return ResponseEntity.ok(cars);
+	}
 }
