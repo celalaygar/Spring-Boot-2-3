@@ -20,7 +20,6 @@ public interface CarRepository extends CrudRepository<Car, Long>{
 	@Query("select c from Car c Where c.name= :name")
 	Car findCarDataByname(@Param("name") String name);
 	
-	
 	@Query("select c from Car c Where c.model= :model")
 	List<Car> findCarDataBymodel(@Param("model") int model);
 }
