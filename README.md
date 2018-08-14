@@ -130,7 +130,7 @@ CREATE TABLE details(
     country VARCHAR(255),
     phone_number VARCHAR(255),
     customeid BIGINT,
-    FOREIGN KEY (customer_id) REFERENCES customer (id)
+    FOREIGN KEY (customerid) REFERENCES customer (id)
 );
 ``` 
 second one : Write localhost:8182/insert to insert data on database. then write other link
