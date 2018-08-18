@@ -1,5 +1,7 @@
 ### 13 - Spring-Boot-13-SpringData-3-JPA-Hibernate-PostgreSQL
-how to use @Embeddable, @Embedded for Spring data on Spring Boot
+how to use @Embeddable, @Embedded for Spring data on Spring Boot<br/>
+first one : create bottom table on any database called Users in pgAdmin 4.<br/> 
+if you change database's name. you can change.
 ``` 
 CREATE TABLE car(
     id BIGINT PRIMARY KEY     NOT NULL,
