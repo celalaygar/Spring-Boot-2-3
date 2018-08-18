@@ -165,3 +165,12 @@ second one : Write localhost:8182/insert to insert data on database.
 ``` . 
 localhost:8182/books    localhost:8182/book/{id}   localhost:8182/customers   localhost:8182/customer/{id}
 ``` 
+### 13 - Spring-Boot-13-SpringData-3-JPA-Hibernate-PostgreSQL
+how to use @@Embeddable, @Embedded for Spring data on Spring Boot
+``` 
+CREATE TABLE car(
+    id BIGINT PRIMARY KEY     NOT NULL,
+    name VARCHAR(255),
+    model INTEGER,
+    details VARCHAR(255)
+);
