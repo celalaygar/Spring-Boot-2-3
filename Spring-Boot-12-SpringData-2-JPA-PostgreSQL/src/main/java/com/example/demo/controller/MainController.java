@@ -39,7 +39,6 @@ public class MainController {
 		Customer c3=new Customer("Ebru Nur" , "ebrunur@gmail.com");
 		Book b1=new Book("Ankara Hayatı",c1);
 		Book b2=new Book("Kahve Köşesi",c1);
-		
 		Book b3=new Book("Memleket İnsani",c2);
 		Book b4=new Book("Temel ile Dursun",c2);
 		
@@ -67,16 +66,13 @@ public class MainController {
 		customerRepository.save(c4);
 		customerRepository.save(c5);
 		
-		
 		Book b6=new Book("Beyaz Hikaye",c4);
 		Book b7=new Book("Kalp Ağrısı",c4);
-		
 		Book b8=new Book("Sarı Gül",c5);
 		Book b9=new Book("Papatya Misali",c5);
 		Book b10=new Book("Gonca Mevsimi",c5);
 		Book b11=new Book("Kara Kış",c5);
 		bookRepository.saveAll(Arrays.asList(b6,b7,b8,b9,b10,b11));
-		
 		
 		return "insert Data..................";
 	}
