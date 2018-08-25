@@ -156,7 +156,7 @@ CREATE TABLE customer(
 
 CREATE TABLE book(
     id BIGINT PRIMARY KEY  NOT NULL,
-    nae VARCHAR(255),
+    name VARCHAR(255),
     customeid BIGINT,
     FOREIGN KEY (customer_id) REFERENCES customer (id)
 );
