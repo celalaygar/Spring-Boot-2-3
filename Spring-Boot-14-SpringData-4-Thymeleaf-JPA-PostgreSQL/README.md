@@ -21,3 +21,4 @@ second one : Write localhost:8182/rest/insert to insert data on database.
 ``` . 
 localhost:8182/customers    localhost:8182/rest/customers   localhost:8182/rest/cust
 ``` 
+![Cat](https://github.com/celalaygar/Spring-Boot-2/blob/master/Spring-Boot-14-SpringData-4-Thymeleaf-JPA-PostgreSQL/customer%20table.png)
