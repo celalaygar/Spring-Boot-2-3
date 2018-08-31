@@ -192,7 +192,7 @@ localhost:8182/car1/{id}                localhost:8182/car2/{id}
 localhost:8182/car_with_name/{name}     localhost:8182/car_with_model/{model}
 ``` 
 ### 14 - Spring-Boot-14-SpringData-4-Thymeleaf-JPA-PostgreSQL
-how to use @ManyToOne for spring boot and data in multiple table.<br/>
+how to use @OneToMany and @ManyToOne for spring boot and data in multiple table.<br/>
 how to use Thymeleaf with jpa hibernate on spring boot.<br/>
 first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
 ``` 
