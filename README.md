@@ -177,7 +177,7 @@ CREATE TABLE car(
     details VARCHAR(255)
 );
 ``` 
-second one : First Write localhost:8182/insert_car to insert data on database.
+second one : First write localhost:8182/insert_car to insert data on database.
 ``` . 
 localhost:8182/insert_car    
 ``` 
