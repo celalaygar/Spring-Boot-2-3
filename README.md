@@ -1,6 +1,6 @@
 ### Spring-Boot-2
 how to change port number? <br/>
-if you change port number, write (server.port=3132) command on application.properties in src/main/resources/application.properties. you can change port number in applicaton.properties. 
+if you wanna change port number, write (server.port=3132) command on application.properties in src/main/resources/application.properties. you can change port number in applicaton.properties. 
 ``` 
 server.port=8182
 ``` 
