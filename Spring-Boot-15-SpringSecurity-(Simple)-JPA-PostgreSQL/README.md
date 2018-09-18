@@ -1,7 +1,7 @@
 ### 15 - Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL (with Static user and password)
 How to use spring security with statick user and password datas on spring boot.<br/> 
-first after PgAdmin4 open, you must run this project. database tables will be generated automatically. <br/>
-how will database table to be generated automatically. Look at this applicaton.properties pls. Beacuse line 15. spring.jpa.hibernate.ddl-auto=create on application.properties.<br/>
+First after PgAdmin4 open, you must run this project. database tables will be generated automatically. <br/>
+How will database table to be generated automatically. Look at this applicaton.properties pls. Beacuse line 15. spring.jpa.hibernate.ddl-auto=create on application.properties.<br/>
 
 but table is here
 ``` 
@@ -19,8 +19,8 @@ CREATE TABLE customer_role(
     FOREIGN KEY (customer_id) REFERENCES customer (id)
 );
 ``` 
-how to use spring security. look at this `webConfigurationClass.java` on Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL/src/main/java/com/example/demo/   <br>
-you can use user and password to login when you run this project
+How to use spring security. look at this `webConfigurationClass.java` on Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL/src/main/java/com/example/demo/   <br>
+You can use user and password to login when you run this project
 `webConfigurationClass.java`
 ``` 
 user / password / role
