@@ -23,11 +23,11 @@ How to use spring security. look at this `webConfigurationClass.java` on Spring-
 You can use user and password to login when you run this project
 `webConfigurationClass.java`
 ``` 
-USER     / PASSWORD     / ROLE
+  USER     / PASSWORD     / ROLE
 -------------------------------------------
-admin    / admin        / "ADMIN","USER"
-fatihf   / 1234         / "ADMIN"
-celal    / 006          / "USER"
-aygar    / aygar        / "EDITOR"
-arda     / 1905         / "EDITOR","USER"
+- admin    / admin        / "ADMIN","USER"
+- fatihf   / 1234         / "ADMIN"
+- celal    / 006          / "USER"
+- aygar    / aygar        / "EDITOR"
+- arda     / 1905         / "EDITOR","USER"
 ``` 
