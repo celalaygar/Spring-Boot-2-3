@@ -20,16 +20,16 @@ public class webConfigurationClass extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
-		.withUser("admin").password("{noop}admin").roles("ADMIN","USER").and()
+		.withUser("admin").password("{noop}admin").roles("ADMIN","EDITOR").and()
 		.withUser("celal").password("{noop}celal").roles("USER").and()	
 		.withUser("arda").password("{noop}arda").roles("EDITOR");
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 	      http.authorizeRequests()
-          .antMatchers("/rest/customers/**","/rest/cust/").hasRole("ADMIN")		
-          .antMatchers("/customers/**").hasRole("USER")	
-          .antMatchers("/customers/**","/rest/cust/").hasRole("EDITOR")
+          .antMatchers("/rest/customers/**").hasRole("ADMIN")
+          .antMatchers("/rest/cust/**").hasRole("EDITOR")
+          .antMatchers("/customers/**").hasRole("USER")
           .anyRequest().authenticated()					//any other request just need authentication
           .and().formLogin();							//enable form login
 	}
