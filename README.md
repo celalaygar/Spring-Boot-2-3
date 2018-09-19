@@ -240,9 +240,16 @@ You can use user and password to login when you run this project
 ``` 
   USER     / PASSWORD     / ROLE
 -------------------------------------------
-- admin    / admin        / "ADMIN","USER"
-- fatihf   / 1234         / "ADMIN"
-- celal    / 006          / "USER"
-- aygar    / aygar        / "EDITOR"
-- arda     / 1905         / "EDITOR","USER"
+- admin    / admin        / "ADMIN"
+- celal    / celal        / "USER"
+- arda     / arda         / "EDITOR"
+``` 
+Accessing links for roles
+``` 
+for ADMIN, ADMIN can access these links
+localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/cust/
+for USER, USER can acces these links
+localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/customer/{email}
+for EDITOR, EDITOR can acces these links
+localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/cust
 ``` 
