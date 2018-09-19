@@ -247,9 +247,11 @@ You can use user and password to login when you run this project
 Accessing links for roles
 ``` 
 for ADMIN, ADMIN can access these links
-localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/cust/
+localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/cust/
+
 for USER, USER can acces these links
-localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/customer/{email}
+localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/customer/{email}/
+
 for EDITOR, EDITOR can acces these links
-localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/cust
+localhost:8182/userinfo/    localhost:8182/rest/cust
 ``` 
