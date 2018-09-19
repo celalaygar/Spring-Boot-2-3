@@ -1,5 +1,5 @@
 ### 15 - Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL (with Static user and password)
-How to use spring security with statick user and password datas on spring boot.<br/> 
+How to use spring security and @Secured with statick user and password datas on spring boot.<br/> 
 First after PgAdmin4 open, you must run this project. database tables will be generated automatically. <br/>
 How will database table to be generated automatically. Look at this applicaton.properties pls. Beacuse line 15. spring.jpa.hibernate.ddl-auto=create on application.properties.<br/>
 
@@ -33,8 +33,10 @@ Accessing links for roles
 ``` 
 for ADMIN, ADMIN can access these links
 localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/cust/
+
 for USER, USER can acces these links
 localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/customer/{email}
+
 for EDITOR, EDITOR can acces these links
 localhost:8182/rest/customers/**    localhost:8182/userinfo/    localhost:8182/rest/cust
 ``` 
