@@ -19,7 +19,7 @@ CREATE TABLE customer_role(
     FOREIGN KEY (customer_id) REFERENCES customer (id)
 );
 ``` 
-How to use spring security and @Secured("USER"). look at this `webConfigurationClass.java` on Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL/src/main/java/com/example/demo/   <br>
+How to use spring security and @Secured("..."). look at this `webConfigurationClass.java` on Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL/src/main/java/com/example/demo/   <br>
 You can use user and password to login when you run this project
 `webConfigurationClass.java`
 ``` 
