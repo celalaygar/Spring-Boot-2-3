@@ -1,7 +1,7 @@
 ### 15 - Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL (with Static user and password)
 How to use spring security and @Secured with statick user and password datas on spring boot.<br/> 
-First after PgAdmin4 open, you must run this project. database tables will be generated automatically. <br/>
-How will database table to be generated automatically. Look at this applicaton.properties pls. Beacuse line 15. spring.jpa.hibernate.ddl-auto=create on application.properties.<br/>
+First you must run this project. database tables will be generated automatically after PgAdmin4 open. <br/>
+How will database's table be generated automatically. Look at this applicaton.properties pls. Beacuse line 15. spring.jpa.hibernate.ddl-auto=create on application.properties.<br/>
 
 but table is here
 ``` 
