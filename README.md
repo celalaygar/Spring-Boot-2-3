@@ -6,10 +6,10 @@ server.port=8182
 ``` 
 ###### for Referans how to learn spring technology. 
 ``` 
-https://www.logicbig.com/
-https://o7planning.org/
-https://memorynotfound.com/
-https://www.concretepage.com/spring-boot/
+- https://www.logicbig.com/                           - https://howtodoinjava.com/
+- https://o7planning.org/                             - https://www.concretepage.com/spring-boot/
+- https://memorynotfound.com/                         - https://www.dineshonjava.com/
+
 ``` 
 ### 1 - spring-boot-HelloWorld
 how to run project. Look at application.properties where Port number is there. 
