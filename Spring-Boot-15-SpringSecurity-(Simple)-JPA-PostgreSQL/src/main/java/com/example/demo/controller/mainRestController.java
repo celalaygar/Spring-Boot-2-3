@@ -71,12 +71,21 @@ public class mainRestController {
 		List<Customer> liste = (List<Customer>) customerRepository.findAll();
 		return liste;
 	}
-	@RequestMapping("/customer/{email}")
+	@RequestMapping("/customer-by-email/{email}")
 	public Customer customerByemail(@PathVariable String email) {
 		Customer customer = customerRepository.findCustomerDataByemail(email);
 		return customer;
 	}
-
+	@RequestMapping("/customerbyname/{name}")
+	public List<Customer> customerdataByname(@PathVariable String name) {
+		List<Customer> liste= customerRepository.findCustomerByName(name);
+		return liste;
+	}
+	@RequestMapping("/customer-by-name/{name}")
+	public Customer customerByname(@PathVariable String name) {
+		Customer customer = customerRepository.findCustomerDataByName(name);
+		return customer;
+	}
 	@RequestMapping("/cust")
 	public String custs() {
 		List<Customer> liste = (List<Customer>) customerRepository.findAll();

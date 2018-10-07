@@ -28,8 +28,8 @@ public class webConfigurationClass extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 	      http.authorizeRequests()
           .antMatchers("/rest/customers/**").hasRole("ADMIN")
-          .antMatchers("/rest/cust/**").hasRole("EDITOR")
-          .antMatchers("/customers/**").hasRole("USER")
+          .antMatchers("/rest/cust/**","/rest/customer-by-name/**").hasRole("EDITOR")
+          .antMatchers("/customers/**","/rest/customerbyname/**").hasRole("USER")
           .anyRequest().authenticated()					//any other request just need authentication
           .and().formLogin();							//enable form login
 	}
