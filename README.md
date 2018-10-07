@@ -4,8 +4,9 @@ if you wanna change port number, write (server.port=3132) command on application
 ``` 
 server.port=8182
 ``` 
-###### for Referans how to learn spring technology. 
-``` 
+##### for Referans how to learn spring technology. 
+```
+- https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
 - https://www.logicbig.com/                           - https://howtodoinjava.com/
 - https://o7planning.org/                             - https://www.concretepage.com/spring-boot/
 - https://memorynotfound.com/                         - https://www.dineshonjava.com/
