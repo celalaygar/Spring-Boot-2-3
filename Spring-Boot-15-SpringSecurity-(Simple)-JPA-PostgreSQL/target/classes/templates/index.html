@@ -34,12 +34,15 @@
 
 		<div class="col-12">
 			<div class="starter-template">
-				<h1>Spring Boot Web Thymeleaf Example</h1>
 				<h2>
-					<span th:text="'Message: ' + ${message}"></span>
+					<span
+						th:text="'Message: ' + ${message}"></span>
 				</h2>
 			</div>
 		</div>
+		<form th:action="@{/logout}" method="post">
+			<input class="btn btn-danger" type="submit" value="LOGOUT" />
+		</form>
 	</div>
 	<!-- /.container -->
 

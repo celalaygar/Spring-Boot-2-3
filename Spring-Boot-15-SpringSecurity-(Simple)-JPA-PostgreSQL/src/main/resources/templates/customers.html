@@ -58,12 +58,13 @@
 			</div>
 		</div>
 		<div class="starter-template">
-			<h1>Spring Boot Web Thymeleaf Example</h1>
 			<h2>
 				<span th:text="'Message: ' + ${message}"></span>
 			</h2>
 		</div>
-
+		<form th:action="@{/logout}" method="post">
+			<input class="btn btn-danger" type="submit" value="LOGOUT" />
+		</form>
 	</div>
 	<!-- /.container -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

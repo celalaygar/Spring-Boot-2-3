@@ -1,7 +1,5 @@
 package com.example.demo.repository;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -14,12 +12,4 @@ public interface CustomerRepository extends CrudRepository<Customer, Long> {
 	@Secured("USER")
 	@Query("select c from Customer c Where c.email= :email")
 	Customer findCustomerDataByemail(@Param("email") String email);
-
-	@Query("select c from Customer c Where c.name= :name")
-	Customer findCustomerDataByName(@Param("name") String name);
-	
-
-	@Query("select c from Customer c Where c.name like %?1%")
-	List<Customer> findCustomerByName( String name);
-	
 }
