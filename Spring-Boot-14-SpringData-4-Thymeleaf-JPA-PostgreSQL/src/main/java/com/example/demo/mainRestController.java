@@ -70,12 +70,6 @@ public class mainRestController {
 		return liste;
 	}
 	
-	@ResponseBody
-	@RequestMapping("/roles")
-	public List<Role> roles() {
-		List<Role> liste= (List<Role>) roleRepository.findAll();
-		return liste;
-	}
 	@RequestMapping("/cust")
 	public String custs() {
 		List<Customer> liste= (List<Customer>) customerRepository.findAll();
