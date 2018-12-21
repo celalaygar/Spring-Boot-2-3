@@ -43,6 +43,7 @@
 							<th scope="col">name</th>
 							<th scope="col">email</th>
 							<th scope="col">password</th>
+							<th scope="col">Action</th>
 						</tr>
 					</thead>
 					<tr th:each="customer : ${customers}">
@@ -51,6 +52,8 @@
 						<td th:utext="${customer.getName()}"></td>
 						<td th:utext="${customer.getEmail()}"></td>
 						<td th:utext="${customer.getPassword()}"></td>
+						<td><a class="btn btm-sm btn-primary" 
+						th:href="@{'/customer/' + ${customer.getEmail()}}">Show Details For Customer</a></td>
 					</tr>
 
 				</table>
