@@ -269,7 +269,7 @@ for EDITOR, EDITOR can acces these links
 localhost:8182/rest/cust/   localhost:8182/rest/customer-by-name/{name}/
 ``` 
 
-### 16 - Spring-Boot-16-SpringData-4-Thymeleaf-JPA-PostgreSQL
+### 16 - Spring-Boot-16-SpringData-5-Thymeleaf-JPA-PostgreSQL
 how to use @ManyToMany and @JoinTable for spring boot and data in multiple table.<br/>
 - You had bettet to look at this applicaton.properties pls. Database's table can be generated automatically, İf you write `spring.jpa.hibernate.ddl-auto=create` on application.properties.
 - your database's table can create regularly when you wrote `spring.jpa.hibernate.ddl-auto=create` on application.properties
