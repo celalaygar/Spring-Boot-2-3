@@ -1,9 +1,10 @@
 ### Spring-Boot-2
-How to change port number? <br/>
-if you wanna change port number, write (server.port=3132) command on application.properties in src/main/resources/application.properties. you can change port number in applicaton.properties. 
+- How to change port number? if you wanna change port number, write (server.port=3132) command on application.properties in src/main/resources/application.properties. you can change port number in applicaton.properties. 
 ``` 
 server.port=8182
 ``` 
+- You had bettet to look at this applicaton.properties pls. Database's table can be generated automatically, İf you write `spring.jpa.hibernate.ddl-auto=create` on application.properties.
+- your database's table can create regularly when you wrote `spring.jpa.hibernate.ddl-auto=create` on application.properties
 ##### for Referans how to learn spring technology. 
 ```
 - https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
