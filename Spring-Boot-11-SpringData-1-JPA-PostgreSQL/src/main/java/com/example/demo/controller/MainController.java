@@ -32,14 +32,13 @@ public class MainController {
 	@RequestMapping("/insert")
 	@ResponseBody
 	public String insert() {
-		System.out.println("-----------------------------------------------------------------------------------------------");
 		detailsRepository.deleteAll();
-        customerRepository.deleteAll();
-        Details lisa = new Details("Hannover","Germany","05558882211", new Customer("fatih","fatih@gmail.com"));
-        detailsRepository.save(lisa);
-        Details mary = new Details("London","England","05551112233",  new Customer("celal","celal@gmail.com"));
-        Details lauren = new Details("Ankara","Turkey","05441114499", new Customer("aylin","aylin@gmail.com"));
-        detailsRepository.saveAll(Arrays.asList(mary,lauren));
+		customerRepository.deleteAll();
+		Details lisa = new Details("Hannover","Germany","05558882211", new Customer("fatih","fatih@gmail.com"));
+		detailsRepository.save(lisa);
+		Details mary = new Details("London","England","05551112233",  new Customer("celal","celal@gmail.com"));
+		Details lauren = new Details("Ankara","Turkey","05441114499", new Customer("aylin","aylin@gmail.com"));
+		detailsRepository.saveAll(Arrays.asList(mary,lauren));
 		
 		return "insert Data..................";
 	}
