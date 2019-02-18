@@ -14,9 +14,6 @@ How to use registering and login on spring boot and security with mysql.
 - Thymeleaf
 - Bootstrap
 ``` 
-
-[![Alt text](https://www.youtube.com/watch?v=VAG2s3j5L3E&t=5s)](https://www.youtube.com/watch?v=VAG2s3j5L3E&t=5s)
-
-
+[![Alt text](https://i.ytimg.com/vi/wZ4AIk5YqqM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC4jTb3UCkmUxECXlMXUJIZ5blX4w)](https://www.youtube.com/watch?v=VAG2s3j5L3E&t=5s)
 
 
