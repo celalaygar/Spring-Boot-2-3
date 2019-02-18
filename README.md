@@ -283,3 +283,21 @@ CREATE TABLE subject(
     name VARCHAR(255)
 );
 ``` 
+### 17 - Spring-Boot-17-SpringSecurity-Jpa-PostgreSQL
+How to use registering and login on spring boot and security with mysql.
+- You had bettet to look at this applicaton.properties pls. Database's table can be generated automatically, İf you write `spring.jpa.hibernate.ddl-auto=create` on application.properties.
+- your database's table can create regularly when you wrote `spring.jpa.hibernate.ddl-auto=create` on application.properties
+##### Using Tools & Technologies
+``` 
+- Spring Boot
+- Spring Security
+- Jpa, Hibernate
+- Mysql
+- Thymeleaf
+- Bootstrap
+``` 
+
+
+
+
+
