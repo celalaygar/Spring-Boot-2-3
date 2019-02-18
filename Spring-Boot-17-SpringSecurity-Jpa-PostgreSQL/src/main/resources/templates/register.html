@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Veteriner Uygulaması</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+    		<h1 class="h3 mb-3 font-weight-normal">Üye Kaydı</h1>
+		    <hr>
+    		<a href="/" class="btn btn-success">Anasayfa</a>
+		    <a href="/login" class="btn btn-primary"> Giriş Yap</a>
+		    <a href="/register" class="btn btn-info">Üye Olma Sayfasına Git</a>
+		    <a href="/secure" class="btn btn-danger"> Detaylar </a>
+		    <hr>
+		</div>
+		
+		<div class="col-md-6">
+			<img alt=""  class="img-thumbnail " src="https://www.bukrek.com/images/veteriner-gunu.jpg">
+		</div>
+		<div class="col-md-6">
+			<div class="alert alert-success" role="alert" th:if="${message}">
+		        Kayıt işlemi başarılı... ( successful )
+		    </div>
+		</div>
+		<div class="col-md-6" th:unless="${message}">
+		    <form autocomplete="off" action="#" th:action="@{/register}" th:object="${user}" method="post">
+
+		        <label>Kullanıcı Adınız </label>
+		        <input type="text" id="firstName" placeholder="First Name" th:field="*{username}" class="form-control"/><br/>
+		
+		        <label>Eposta</label>
+		        <input type="text" id="email" placeholder=" Email" th:field="*{email}" class="form-control"/><br/>
+		
+		        <label>Parolanız </label>
+		        <input type="text" id="password" placeholder=" Password" th:field="*{password}" class="form-control"/><br/>
+		
+		        <button type="submit" class="btn btn-primary text-center form-control">Kaydet</button>
+		    </form>
+		</div>
+    <div class="margin-top20 text-center"><a th:href="@{/login}">Giriş Sayfasına Git</a></div>
+		
+		
+	</div>
+</div>
+</body>
+</html>
