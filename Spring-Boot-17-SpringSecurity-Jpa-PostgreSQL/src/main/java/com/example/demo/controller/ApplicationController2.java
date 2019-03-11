@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/rest/auth")
-public class ApplicationController {
+@RequestMapping("/rest2/auth")
+public class ApplicationController2 {
 
-	//@PreAuthorize("hasAnyRole('ADMIN')")
+	@PreAuthorize("hasAnyRole('ADMIN')")
 	@GetMapping("/hello")
 	public String HelloPage() {
 		
-		return "Hello World.....";
+		return "Hello World..... REST 2";
 	}
 	
 	@GetMapping("/proccess")
