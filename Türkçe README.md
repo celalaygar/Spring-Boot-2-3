@@ -28,8 +28,8 @@ Links:
 http://localhost:8182/    http://localhost:8182/personels
 ```
 ### 3 - spring-boot-view-Error-Page
-Error sayfası nasıl kullanılabilir.`src/main/resources/public/error/(ErrorPage.html) dizinine Error sayfası eklemek zorundasınız. 
-Örnek olarak404.html veya 403.html` 
+Error sayfası nasıl kullanılabilir.`src/main/resources/public/error/(ErrorPage.html)` dizinine Error sayfası eklemek zorundasınız. 
+Örnek olarak  ` 404.html veya 403.html` 
 Altta verilen linkleri yazarsanız eğer Error sayfalarını göremezsiniz.
 ``` 
 http://localhost:8182/    http://localhost:8182/personels
