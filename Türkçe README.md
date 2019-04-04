@@ -4,8 +4,8 @@ dizininde bulunan `application.properties` dosyasının içerisine giripi örnek
 ``` 
 ``` 
 - Otomatik olarak bazı projelerde kullanılan veri tabanı tablolarının oluşmasını isterseniz eğer tekrar applicaton.properties dosyası <br/>
-içerisinde `spring.jpa.hibernate.ddl-auto=create` create değerini vererek veritabanını oluşturabilirsiniz. <br/>
-Daha sonra bu veritabanı kalıcı olarak kalmasını isterseniz proje çalışır haldeyken veya durdurup `create` değerinin yerine `update` yazarak <br/>
+içerisinde `spring.jpa.hibernate.ddl-auto=create` create değerini vererek veritabanını oluşturabilirsiniz.
+Daha sonra bu veritabanı kalıcı olarak kalmasını isterseniz proje çalışır haldeyken veya durdurup `create` değerinin yerine `update` yazarak 
 düzeltebilirsiniz. Eğer değeri `create` olarak bırakırsınız projeyi her çalıştırdığınızda veritabanı tabloları sıfırdan tekrar oluşturulacaktır.
 ##### spring teknelojilerini kullanırken yararlanılabileceğiniz referans sayfalar 
 ```
