@@ -1,5 +1,5 @@
 ### Spring-Boot-2
-- Port numarası nasıl değiştirilir? Port numarasını değiştirmek isterseniz proje içerisindeki `src/main/resources/application.properties` <br/>
+- Port numarası nasıl değiştirilir? Port numarasını değiştirmek isterseniz proje içerisindeki `src/main/resources/application.properties` 
 dizininde bulunan `application.properties` dosyasının içerisine giripi örnek olarak `server.port=3132` yazarak değiştirebbilirsiniz.
 ``` 
 ``` 
