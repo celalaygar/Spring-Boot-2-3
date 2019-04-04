@@ -3,7 +3,7 @@
 dizininde bulunan `application.properties` dosyasının içerisine giripi örnek olarak `server.port=3132` yazarak değiştirebbilirsiniz.
 ``` 
 ``` 
-- Otomatik olarak bazı projelerde kullanılan veri tabanı tablolarının oluşmasını isterseniz eğer tekrar applicaton.properties dosyası <br/>
+- Otomatik olarak bazı projelerde kullanılan veri tabanı tablolarının oluşmasını isterseniz eğer tekrar applicaton.properties dosyası 
 içerisinde `spring.jpa.hibernate.ddl-auto=create` create değerini vererek veritabanını oluşturabilirsiniz.
 Daha sonra bu veritabanı kalıcı olarak kalmasını isterseniz proje çalışır haldeyken veya durdurup `create` değerinin yerine `update` yazarak 
 düzeltebilirsiniz. Eğer değeri `create` olarak bırakırsınız projeyi her çalıştırdığınızda veritabanı tabloları sıfırdan tekrar oluşturulacaktır.
