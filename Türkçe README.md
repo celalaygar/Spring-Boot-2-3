@@ -39,3 +39,14 @@ http://localhost:8182/    http://localhost:8182/personels
 http://localhost:8182/deneme                           http://localhost:8182/asd        
 http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/deneme.jsp
 ```
+### 4 - springboot-(REST_API_QUERY) 
+###### (Static)
+- RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET Kullanımı gösterilmiltir.
+`PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/)` paketindeki Test bölümünde kullanımını test edebilirsiniz.
+- Eclipse üzerinde `run as -> Junit Test` ile  `rc/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java ` dosyasındaki methodları çalıştırabilir ve sonucları görebilirsiniz.. 
+DDeğişen data sonuçlarını localhost:8182/rest/personels linkinden gözlemleyebilirsiniz.
+### 5 - springboot-with-h2-database (REST_API_QUERY)  (jdbc with h2 database)
+- h2 database jdbc ile nasıl kullanılmaktadır.<br/>
+- Bu uygulamada H2 database üzerinde schema, table nasıl kurulur ve jdbc ile data nasıl eklenir bunlar gösterilmiştir. `src/main/resources/ data.sql & schema.sql` dosyalarındaki sql query leri inceleyebilirsiniz.<br/>
+- Ayrıca ` src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java` dizinindeki createPersonelTest, deletePersonelTest methodları Eclipse üzerinde ` run as -> Junit Test` ile çalıştırabilirsiniz.
+
