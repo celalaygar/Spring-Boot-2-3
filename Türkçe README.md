@@ -41,12 +41,43 @@ http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/den
 ```
 ### 4 - springboot-(REST_API_QUERY) 
 ###### (Static)
-- RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET Kullanımı gösterilmiltir.
+- RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET kullanımı gösterilmiltir.
 `PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/)` paketindeki Test bölümünde kullanımını test edebilirsiniz.
-- Eclipse üzerinde `run as -> Junit Test` ile  `rc/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java ` dosyasındaki methodları çalıştırabilir ve sonucları görebilirsiniz.. 
-DDeğişen data sonuçlarını localhost:8182/rest/personels linkinden gözlemleyebilirsiniz.
+- Eclipse üzerinde `run as -> Junit Test` ile  `rc/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java ` dosyasındaki methodları çalıştırabilir ve sonuçları görebilirsiniz. Değişen data sonuçlarını localhost:8182/rest/personels linkinden gözlemleyebilirsiniz.
 ### 5 - springboot-with-h2-database (REST_API_QUERY)  (jdbc with h2 database)
 - h2 database jdbc ile nasıl kullanılmaktadır.<br/>
 - Bu uygulamada H2 database üzerinde schema, table nasıl kurulur ve jdbc ile data nasıl eklenir bunlar gösterilmiştir. `src/main/resources/ data.sql & schema.sql` dosyalarındaki sql query leri inceleyebilirsiniz.<br/>
 - Ayrıca ` src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java` dizinindeki createPersonelTest, deletePersonelTest methodları Eclipse üzerinde ` run as -> Junit Test` ile çalıştırabilirsiniz.
 
+### 6 - springboot-jpa-with-h2-database (REST_API_QUERY)
+H2 database ile JPA nasıl kullanılır bu gösterilmiştir.<br/>
+@Transactional, @Id, @GeneratedValue, @Entity, @Table @Column annotasyonları nasıl kullanılır.
+
+### 7 - springboot-simple-security-example
+- Login and logout prosedürleri nasıl kullanılır. nasıl kullanıldığı gösterilmiştir.
+- Specific login page ve beni hatırla yönteminin kullanımı gösterilmiştir.
+- ilk olarak spring-boot-starter-security dependency pom.xml içerisine eklemek zorundasınız. 
+- Statik user name ve password belirleme işlemleri için `src/main/resources/...` dizinndeki `application.properties` dosyasına bakabilirsiniz. 
+``` 
+biz örnek olarak bu user name ve password ü belirledik.
+spring.security.user.name=celal
+spring.security.user.password=123456
+```
+### 8 - SpringJPA-PostgreSQL-Example
+Bu örnek uygulamada Postgresql ve buna bağlı olarak pgAdmin 4 kullanılmıştır. 
+- İlk adım olarak pdAdmin 4 açınız  Veri tabanı isni olarak Personels adında bir veri tabanı oluşturmalısınız isterseniz application properties dosyasında ismi değiştirip ona göre yaptığınız değişikliklere göre veri tabanı ismi kullanabilirsiniz. 
+- daha sonra  SQL Editor kullanınız ve customer table  oluşturmak için alttaki sql query i kullanabilirsiniz.
+``` 
+CREATE TABLE customer(
+    id BIGINT PRIMARY KEY     NOT NULL,
+    firstname VARCHAR(20),
+    lastname VARCHAR(20)
+);
+``` 
+ilk olarak veritabanına kayıt işlemleri yapmak için browser üzerinde localhost:8182/save yazmanız gerekmektedir. 
+Daha sonra  örnek olarak alttaki linkleri deneyebilirsiniz.
+``` 
+localhost:8182/findall
+localhost:8182/findbyid?id=3  
+localhost:8182/findbylastname?lastname=Terim
+``` 
