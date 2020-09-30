@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -66,9 +67,12 @@ public class User {
 
 	@Column(name = "email", unique = true)
 	@NotEmpty
+	@NotNull
 	@Size(min = 5, max = 200)
 	private String email;
 
+	private String image;
+	
 	@Transient
 	@NotEmpty
 	@NotNull

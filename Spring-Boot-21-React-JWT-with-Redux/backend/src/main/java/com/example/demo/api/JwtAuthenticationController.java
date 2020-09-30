@@ -30,6 +30,8 @@ import com.example.demo.jwt.config.JwtResponse;
 import com.example.demo.jwt.config.JwtTokenUtil;
 import com.example.demo.jwt.config.JwtUserDetails;
 import com.example.demo.jwt.config.JwtUserDetailsService;
+import com.example.demo.model.User;
+import com.example.demo.repo.UserRepository;
 import com.example.demo.util.ApiPaths;
 
 @RestController
@@ -44,22 +46,23 @@ public class JwtAuthenticationController {
 	private JwtTokenUtil jwtTokenUtil;
 
 	@Autowired
+	private UserRepository userRepository;
+	@Autowired
 	private JwtUserDetailsService userDetailsService;
 
 	//@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@PostMapping
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
 		//authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
-
 		try {
-			
 			Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
 					authenticationRequest.getUsername(), authenticationRequest.getPassword()));
 
 			SecurityContextHolder.getContext().setAuthentication(authentication);
 			String jwt = jwtTokenUtil.generateToken(authentication);
 			String username = authenticationRequest.getUsername();
-			return ResponseEntity.ok(new JwtResponse(username,jwt));
+			User user = userRepository.findByUsername(username);
+			return ResponseEntity.ok(new JwtResponse(username,jwt,user.getEmail(),user.getImage()));
 		}catch (BadCredentialsException e) {
 			ApiError error = new ApiError(401, "Unauthorized request : "+e.getMessage(), "/api/login");
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
