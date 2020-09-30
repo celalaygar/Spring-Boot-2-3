@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Input from '../../components/input';
-import { withTranslation } from 'react-i18next';
-// import AlertifyService from '../../Services/AlertifyService';
-// import LanguageSelector from '../../components/LanguageSelector';
+import { withTranslation } from 'react-i18next'; 
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { /*loginAction,*/ loginHandler } from './../../redux/AuthenticationAction';
@@ -17,10 +15,11 @@ class UserLoginPage extends Component {
             error: null,
             errors: {
             }
-        };
-        this.onClickLogin = this.onClickLogin.bind(this);
+        }; 
     }
+    componentDidMount(){
 
+    }
     onChangeData = (type, event) => {
         if (this.state.error)
             this.setState({ error: null })
@@ -34,25 +33,12 @@ class UserLoginPage extends Component {
         if (this.state.error) {
             this.setState({ error: null });
         }
-        const { username, password } = this.state;
         const { dispatch, history } = this.props;
-        const data = { username, password };
-        console.log(data)
+        const { username, password } = this.state;
+        const creds = { username, password };
+        
         try {
-            await dispatch(loginHandler(data));
-            // const response = await ApiService.login(data)
-            // if (response) {
-            //     this.setState({ error: null })
-            //     const authState = {
-            //         ...response.data,
-            //         isLoggedIn: true,
-            //         password: this.state.password,
-            //         email: null,
-            //         image: "https://i.milliyet.com.tr/MolatikDetayBig/2019/04/12/fft371_mf32728256.Jpeg"
-            //     }
-            //     ApiService.changeAuthToken(response.data.jwttoken);
-            //     dispatch(loginAction(authState));
-            // }
+            await dispatch(loginHandler(creds));
             history.push("/index");
         } catch (error) {
             if (error.response) {
@@ -68,17 +54,15 @@ class UserLoginPage extends Component {
         }
     }
     render() {
-        //const { isLoggedin, username } = state;
         const { username, password } = this.state.errors;
         const btnEnable = this.state.username && this.state.password;
         const { t } = this.props;
-        return ( 
-                <div className="container row">
-
+        return (
+            <div className="container row">
                 <div className="col-lg-8">
                     <h3>{t('Login')}</h3>
                     <hr />
-                    <p className="description-p" style={{ color: "red" }}>  ( * ) Zorunlu alanlar</p>
+                    <p className="description-p" style={{ color: "red" }}>  ( * ) Zorunlu alanlar </p>
                     <form >
                         <Input
                             label={t("Username *")}
@@ -105,11 +89,11 @@ class UserLoginPage extends Component {
                             onClick={this.onClickLogin}>{t('Login')}</button>
                     </form>
                     <br />
-                    {this.state.error ?
+                    {this.state.error &&
                         <div className="alert alert-danger" role="alert">
                             {this.state.error}
                         </div>
-                        : null
+                        
 
                     }
                 </div>
@@ -122,7 +106,7 @@ class UserLoginPage extends Component {
                     <hr />
                     <hr />
                 </div>
-            </div> 
+            </div>
         )
     }
 }

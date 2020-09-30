@@ -9,9 +9,9 @@ class AlertifyService {
         //window.location.href = '/patients';
         //this.props.history.push('/patients' );
         alertify.alert(message, function () {
-            alertify.error(message);
+            //alertify.error(message);
         }); //.set({ title: "Attention" }).set({ transition: 'slide' }).show();
-        return true;
+        
     }
     successMessage(message){
         alertify.success(message);

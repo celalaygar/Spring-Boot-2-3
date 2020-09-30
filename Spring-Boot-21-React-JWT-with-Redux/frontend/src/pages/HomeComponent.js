@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UserList from '../components/UserList';
 
 
 export default class HomeComponent extends Component {
@@ -15,8 +16,9 @@ export default class HomeComponent extends Component {
 
         return (
             <div className="col-lg-12">
-                <h5>Home Page</h5>
+                <h3>Home Page</h3>
                 <hr />
+                <UserList />
             </div>
         )
     }

@@ -9,11 +9,10 @@ import UserDetailPage from './pages/User/UserDetailPage';
 import HomeComponent from './pages/HomeComponent';
 import AuthenticatedRoute from './components/AuthenticatedRoute';
 import { connect } from 'react-redux';
-import ApiService from './Services/ApiService';
+import ApiService from './Services/BaseService/ApiService';
+import UsersPage from './pages/User/UsersPage';
 
-
-
-  class App extends Component {
+class App extends Component {
 
   constructor(props) {
     super(props);
@@ -33,8 +32,8 @@ import ApiService from './Services/ApiService';
     localStorage.setItem("username", authState.username);
     localStorage.setItem("jwttoken", authState.jwttoken);
     localStorage.setItem("isLoggedIn", true);
-    this.setState({...authState,isLoggedIn: true});
-    
+    this.setState({ ...authState, isLoggedIn: true });
+
     return <Redirect to="/index" />
   }
   onLogoutSuccess = () => {
@@ -59,27 +58,29 @@ import ApiService from './Services/ApiService';
     // localStorage.removeItem("isLoggedIn");
 
     let links = null;
-    const {isLoggedIn}=this.props;
+    const { isLoggedIn } = this.props;
     //console.log(this.props)
     // if not logged in
     //if (!AuthenticationService.isUserLoggedIn() ) {
     if (!isLoggedIn) {
       links = (
         <Switch>
-          <Route exact path="/login" component={(props) => <UserLoginPage {...props} onLoginSuccess={this.onLoginSuccess} />}/> 
-          <Route path="/signup" component={UserSignupPage} />  
-          <Route exact path="/" component={(props) => <UserLoginPage {...props} onLoginSuccess={this.onLoginSuccess} />}/> 
+          <Route exact path="/login" component={(props) => <UserLoginPage {...props} onLoginSuccess={this.onLoginSuccess} />} />
+          <Route path="/signup" component={UserSignupPage} />
+          <Route exact path="/" component={(props) => <UserLoginPage {...props} onLoginSuccess={this.onLoginSuccess} />} />
           <Redirect to="/" />
         </Switch>
       );
-    } 
+    }
     // if logged in
     //if(AuthenticationService.isUserLoggedIn())  {
-    if(isLoggedIn){
+    if (isLoggedIn) {
       links = (
         <Switch>
-          <AuthenticatedRoute exact  path="/index" component={HomeComponent}  isLoggedIn={isLoggedIn} />
-          <AuthenticatedRoute path="/user/:username" component={UserDetailPage}  isLoggedIn={isLoggedIn} />
+          <AuthenticatedRoute exact path="/index" component={HomeComponent} isLoggedIn={isLoggedIn} />
+          <AuthenticatedRoute path="/user/:username" component={UserDetailPage} isLoggedIn={isLoggedIn} />
+          <AuthenticatedRoute exact path="/users" component={UsersPage} isLoggedIn={isLoggedIn} />
+          
           <Redirect to="/index" />
         </Switch>
       );
@@ -97,10 +98,10 @@ import ApiService from './Services/ApiService';
               // jwttoken={jwttoken}
               onLogoutSuccess={this.onLogoutSuccess}
             />
+            <LanguageSelector />
             {links}
           </BrowserRouter>
 
-          <LanguageSelector />
 
           {/* <UserSignupPage /> */}
           {/* <UserLoginPage />
@@ -112,13 +113,13 @@ import ApiService from './Services/ApiService';
 }
 const mapStateToProps = (store) => {
   return {
-      isLoggedIn: store.isLoggedIn,
-      username: store.username,
-      jwttoken: store.jwttoken
+    isLoggedIn: store.isLoggedIn,
+    username: store.username,
+    jwttoken: store.jwttoken
   };
 };
 
-export default connect(mapStateToProps)(App) ;
+export default connect(mapStateToProps)(App);
 
 
 
