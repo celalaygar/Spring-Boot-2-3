@@ -299,8 +299,18 @@ How to use registering and login on spring boot and security with mysql.
 - Thymeleaf
 - Bootstrap
 ``` 
-
-
-
-
+### 23 - Spring-Boot-23-Base-Model-Inheritance PostgreSQL
+- How to use Base Model Inheritance in Multible model with PostgreSQL
+- how to use @Inheritance(....) Annotations with One to many relations
+- Look at link : 
+- [![Look at this class: Transaction](https://github.com/celalaygar/Spring-Boot-2/blob/master/Spring-Boot-23-Base-Model-Inheritance/src/main/java/com/eteration/simplebanking/model/Transaction.java)
+``` 
+    @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+```  
+##### Using Tools & Technologies
+``` 
+- Spring Boot
+- Jpa, Hibernate
+- PostgreSQL
+``` 
 
