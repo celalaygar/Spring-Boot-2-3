@@ -1,0 +1,24 @@
+server:
+  port: 8989
+
+
+kafka:
+  topic: kafka_topic
+  group: kafka_group
+
+
+
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: http://127.0.0.1:29092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      bootstrap-servers: 127.0.0.1:29092
+      group-id: kafka_group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
