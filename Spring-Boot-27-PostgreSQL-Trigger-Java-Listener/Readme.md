@@ -3,7 +3,7 @@
 I have three trigger and I tried all of them on java. this project can be used how to listen trigger to catch changing on related table.
 
 
-### imnsert trigger
+### insert trigger
 ``` 
 CREATE OR REPLACE FUNCTION notify_table_inserted1() RETURNS TRIGGER AS $$
 BEGIN
