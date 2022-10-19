@@ -47,10 +47,7 @@ CREATE TRIGGER notify_table_updated
 EXECUTE PROCEDURE notify_table_updated1();
 ``` 
 
-
-
-
-### delete trigger is ok
+### delete trigger
 ``` 
 CREATE OR REPLACE FUNCTION notify_table_deleted1() RETURNS TRIGGER AS $$
 BEGIN
