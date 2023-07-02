@@ -12,7 +12,7 @@
     "i18next": "^19.7.0",
     "jquery": "^3.5.1",
     "moment": "^2.29.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "react": "^16.13.1",
     "react-datepicker": "^3.2.2",
     "react-dom": "^16.13.1",
@@ -21,7 +21,7 @@
     "react-preloaders": "^3.0.3",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "^5.0.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "secure-ls": "^1.2.6"
