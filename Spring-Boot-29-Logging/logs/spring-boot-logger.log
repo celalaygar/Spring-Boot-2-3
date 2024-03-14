@@ -1,0 +1,44 @@
+2024-03-14 23:36:01,606 INFO  [main] Starting DemoApplicationTests using Java 17.0.7 with PID 11724 (started by aygar in C:\Users\aygar\Desktop\Yeni klasör)
+2024-03-14 23:36:01,608 DEBUG  [main] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-03-14 23:36:01,610 INFO  [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-14 23:36:03,832 INFO  [main] Started DemoApplicationTests in 2.967 seconds (process running for 5.915)
+2024-03-14 23:36:59,885 INFO  [main] Starting DemoApplicationTests using Java 17.0.7 with PID 32280 (started by aygar in C:\Users\aygar\Desktop\Yeni klasör)
+2024-03-14 23:36:59,894 DEBUG  [main] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-03-14 23:36:59,897 INFO  [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-14 23:37:01,977 INFO  [main] Started DemoApplicationTests in 2.838 seconds (process running for 4.554)
+2024-03-14 23:37:43,024 INFO  [main] Starting DemoApplicationTests using Java 17.0.7 with PID 27164 (started by aygar in C:\Users\aygar\Desktop\Yeni klasör)
+2024-03-14 23:37:43,027 DEBUG  [main] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-03-14 23:37:43,029 INFO  [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-14 23:37:45,094 INFO  [main] Started DemoApplicationTests in 2.791 seconds (process running for 4.567)
+2024-03-14 23:39:58,108 INFO  [main] Starting DemoApplication using Java 17.0.7 with PID 32296 (C:\Users\aygar\Desktop\Yeni klasör\target\classes started by aygar in C:\Users\aygar\Desktop\Yeni klasör)
+2024-03-14 23:39:58,111 DEBUG  [main] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-03-14 23:39:58,114 INFO  [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-14 23:39:59,833 INFO  [main] Tomcat initialized with port 8080 (http)
+2024-03-14 23:39:59,843 INFO  [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-14 23:39:59,845 INFO  [main] Starting service [Tomcat]
+2024-03-14 23:39:59,845 INFO  [main] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-14 23:39:59,971 INFO  [main] Initializing Spring embedded WebApplicationContext
+2024-03-14 23:39:59,973 INFO  [main] Root WebApplicationContext: initialization completed in 1759 ms
+2024-03-14 23:40:00,603 INFO  [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-14 23:40:00,637 INFO  [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-14 23:40:00,651 INFO  [main] Started DemoApplication in 3.461 seconds (process running for 4.083)
+2024-03-14 23:40:32,135 INFO  [main] Starting DemoApplication using Java 17.0.7 with PID 24376 (C:\Users\aygar\Desktop\Yeni klasör\target\classes started by aygar in C:\Users\aygar\Desktop\Yeni klasör)
+2024-03-14 23:40:32,139 DEBUG  [main] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-03-14 23:40:32,141 INFO  [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-14 23:40:34,020 INFO  [main] Tomcat initialized with port 8080 (http)
+2024-03-14 23:40:34,042 INFO  [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-14 23:40:34,047 INFO  [main] Starting service [Tomcat]
+2024-03-14 23:40:34,047 INFO  [main] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-14 23:40:34,187 INFO  [main] Initializing Spring embedded WebApplicationContext
+2024-03-14 23:40:34,189 INFO  [main] Root WebApplicationContext: initialization completed in 1941 ms
+2024-03-14 23:40:34,842 INFO  [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-14 23:40:34,908 INFO  [main] Tomcat started on port 8080 (http) with context path ''
+2024-03-14 23:40:34,922 INFO  [main] Started DemoApplication in 3.744 seconds (process running for 4.342)
+2024-03-14 23:40:39,219 INFO  [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-14 23:40:39,219 INFO  [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-03-14 23:40:39,220 INFO  [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-03-14 23:40:39,277 DEBUG  [http-nio-8080-exec-1] Debug log message get
+2024-03-14 23:40:39,277 INFO  [http-nio-8080-exec-1] Info log message get
+2024-03-14 23:40:39,277 ERROR  [http-nio-8080-exec-1] Error log message
+2024-03-14 23:40:39,277 WARN  [http-nio-8080-exec-1] Warn log message
+2024-03-14 23:40:39,277 TRACE  [http-nio-8080-exec-1] Trace log message
