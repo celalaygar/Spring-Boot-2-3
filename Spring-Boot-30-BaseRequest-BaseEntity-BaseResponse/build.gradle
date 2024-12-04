@@ -1,0 +1,55 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.1'
+	id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc_auth', version: '8.2.0.x64'
+	implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '8.2.0.jre8'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Spring Boot Starter Dependencies
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// PostgreSQL Driver
+	runtimeOnly 'org.postgresql:postgresql' // PostgreSQL veritabanı için driver
+
+	// Lombok for cleaner code (optional)
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Spring Boot DevTools for live reload (optional, recommended during development)
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
