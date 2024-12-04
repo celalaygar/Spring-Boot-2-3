@@ -3,14 +3,14 @@ spring:
     name: demo
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/mydatabase
-    username: myusername
-    password: mypassword
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -18,3 +18,6 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+
+server:
+  port: 5555

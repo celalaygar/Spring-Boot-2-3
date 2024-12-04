@@ -16,8 +16,5 @@ public class Book extends BaseEntity {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @Version
-    private Long version;
-
     // Getters and Setters
 }

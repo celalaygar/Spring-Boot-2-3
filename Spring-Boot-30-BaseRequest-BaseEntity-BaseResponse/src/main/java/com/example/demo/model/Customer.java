@@ -15,8 +15,5 @@ public class Customer extends BaseEntity {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Book> books;
 
-    @Version
-    private Long version;
-
     // Getters and Setters
 }

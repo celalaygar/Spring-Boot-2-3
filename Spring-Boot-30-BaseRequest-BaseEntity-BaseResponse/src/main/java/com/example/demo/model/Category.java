@@ -9,7 +9,9 @@ import lombok.Data;
 public class Category extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "sq_category_id", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_category_id")
+    @Column(name = "category_id")
     private Long categoryId;
 
     // 1000 1001  1002
@@ -24,7 +26,5 @@ public class Category extends BaseEntity {
     // 1000
     private Long parentCategoryId;
 
-    @Version
-    private Long version;
 
 }

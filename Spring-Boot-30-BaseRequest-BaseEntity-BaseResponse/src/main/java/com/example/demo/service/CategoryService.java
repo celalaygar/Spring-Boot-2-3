@@ -39,6 +39,7 @@ public class CategoryService {
         code.setCode(code.getNextCode());
         code.setNextCode(code.getNextCode() + 1);
         codeRepository.save(code);
+        category.setCategoryCodeName(category.getCategoryCode() + " - " + category.getCategoryName());
         Category savedCategory = categoryRepository.save(category);
 
         BaseResponse<Category> response = new BaseResponse<>(
@@ -82,7 +83,7 @@ public class CategoryService {
         BaseResponse<Code> response = new BaseResponse<>(
                 true,
                 "getAllCodes",
-                HttpStatus.OK,
+                HttpStatus.CREATED,
                 List.of(code));
         return response;
     }

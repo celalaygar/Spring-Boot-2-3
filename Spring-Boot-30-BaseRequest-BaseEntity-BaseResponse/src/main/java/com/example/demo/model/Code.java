@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Code extends BaseEntity {
+public class Code{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,8 +15,6 @@ public class Code extends BaseEntity {
     private Integer code;
     private Integer nextCode;
 
-    @Version
-    private Long version;
 
     // Getters and Setters
 }
