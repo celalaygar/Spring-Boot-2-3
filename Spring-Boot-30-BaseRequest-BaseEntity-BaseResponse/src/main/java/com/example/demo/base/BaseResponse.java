@@ -25,4 +25,11 @@ public class BaseResponse<T> {
         this.data = data;
     }
 
+
+    public BaseResponse(boolean success, HttpStatus httpStatus, Collection<T> data) {
+        this.success = success;
+        this.httpStatus = httpStatus;
+        this.statusCode = httpStatus.value();
+        this.data = data;
+    }
 }
