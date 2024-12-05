@@ -44,7 +44,6 @@ public class CategoryService {
 
         BaseResponse<Category> response = new BaseResponse<>(
                 true,
-                "savedCategory",
                 HttpStatus.CREATED,
                 List.of(savedCategory));
 
@@ -54,7 +53,6 @@ public class CategoryService {
     public BaseResponse<List<Category>> getAllCategories() {
         BaseResponse<List<Category>> response = new BaseResponse<>(
                 true,
-                "getAllCategories",
                 HttpStatus.OK,
                 List.of(categoryRepository.findAll()));
         return response;
@@ -72,7 +70,6 @@ public class CategoryService {
         }
         BaseResponse<Category> response = new BaseResponse<>(
             true,
-            "getCategoryById",
             HttpStatus.OK,
             List.of(opt.get()));
         return response;
@@ -82,7 +79,6 @@ public class CategoryService {
         code =  codeRepository.save(code);
         BaseResponse<Code> response = new BaseResponse<>(
                 true,
-                "getAllCodes",
                 HttpStatus.CREATED,
                 List.of(code));
         return response;
@@ -91,7 +87,6 @@ public class CategoryService {
     public BaseResponse<List<Code>> getAllCodes() {
         BaseResponse<List<Code>> response = new BaseResponse<>(
                 true,
-                "getAllCodes",
                 HttpStatus.OK,
                 List.of(codeRepository.findAll()));
         return response;
@@ -110,7 +105,6 @@ public class CategoryService {
         }
         BaseResponse<Code> response = new BaseResponse<>(
                 true,
-                "getCodeById",
                 HttpStatus.OK,
                 List.of(opt.get()));
         return response;
