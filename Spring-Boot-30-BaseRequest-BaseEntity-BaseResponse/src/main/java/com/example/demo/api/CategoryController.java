@@ -33,8 +33,8 @@ public class CategoryController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<BaseResponse<Category>> getCategoryById(@RequestBody BaseRequest<Long> request) {
-        BaseResponse<Category> response = categoryService.getCategoryById(request.getBody());
+    public ResponseEntity<BaseResponse<Category>> getCategoryById(@PathVariable Long id) {
+        BaseResponse<Category> response = categoryService.getCategoryById(id);
         return ResponseEntity.status(response.getHttpStatus()).body(response);
     }
 
@@ -51,8 +51,8 @@ public class CategoryController {
     }
 
     @GetMapping("/codes/{id}")
-    public ResponseEntity<BaseResponse<Code>> getCodeById(@RequestBody BaseRequest<Long> request) {
-        BaseResponse<Code> response =  categoryService.getCodeById(request.getBody());
+    public ResponseEntity<BaseResponse<Code>> getCodeById(@PathVariable Long id) {
+        BaseResponse<Code> response =  categoryService.getCodeById(id);
         return ResponseEntity.status(response.getHttpStatus()).body(response);
     }
 }
