@@ -1,0 +1,30 @@
+
+spring:
+  application:
+    name: reaktif-rol-tabanli-api
+  data:
+    mongodb:
+      uri: mongodb://root11:371root1124@localhost:27017/security_v2?authSource=admin
+  security:
+    jwt:
+      secret: QWx3YXlzLXNlY3VyZS1hbmQtc3Ryb25nLWtleS1mb3Itam90LTUxMi1zZWN1cml0eS0xMjM0NTY3ODkwMTIzNDU2Nzg5
+      expiration: 3600000
+
+logging:
+  level:
+    root: INFO
+    com.reaktifroltabanliapi: DEBUG
+    org.springframework.security: INFO
+  file:
+    name: logs/application.log
+    max-size: 10MB
+    max-history: 7
+
+server:
+  port: 8080
+
+app:
+  rate-limit:
+    enabled: true
+    max-requests: 10
+    time-window-seconds: 60

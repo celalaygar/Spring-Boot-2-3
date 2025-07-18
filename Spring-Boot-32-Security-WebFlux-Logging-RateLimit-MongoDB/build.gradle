@@ -1,0 +1,64 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.5.3'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.security'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Spring Boot Starter'lar
+	implementation 'org.springframework.boot:spring-boot-starter-webflux' // Reaktif Web uygulamaları için
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive' // Reaktif MongoDB desteği
+	implementation 'org.springframework.boot:spring-boot-starter-security' // Reaktif güvenlik için
+	implementation 'org.springframework.boot:spring-boot-starter-validation' // DTO validasyonları için
+	implementation 'org.springframework.boot:spring-boot-starter-actuator' // Üretim hazır özellikleri için (Health check vb.)
+
+	// JWT (JSON Web Token) bağımlılıkları
+	implementation 'io.jsonwebtoken:jjwt-api:0.12.5' // JWT API
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5' // JWT implementasyonu
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5' // JWT JSON işleme
+
+	// Lombok (getter, setter, constructor vb. için)
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok' // Testler için de
+
+
+
+	// Test Bağımlılıkları
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test' // Reaktif testler için
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
