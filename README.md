@@ -16,13 +16,16 @@ This repository contains a collection of 32 small example projects built primari
 
 ##### Useful References for Spring Technologies:
 
-
-
+``` 
 https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
-https://www.logicbig.com/ - https://howtodoinjava.com/
-https://o7planning.org/ - https://www.concretepage.com/spring-boot/
-https://memorynotfound.com/ - https://www.dineshonjava.com/
----
+https://www.logicbig.com/ 
+https://howtodoinjava.com/
+https://o7planning.org/
+https://www.concretepage.com/spring-boot/
+https://memorynotfound.com/
+https://www.dineshonjava.com/
+```
+
 
 ### Project Descriptions
 
