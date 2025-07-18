@@ -1,316 +1,213 @@
-### Spring-Boot-2
-- How to change port number? if you wanna change port number, write (server.port=3132) command on application.properties in src/main/resources/application.properties. you can change port number in applicaton.properties. 
-``` 
-server.port=8182
-``` 
-- You had bettet to look at this applicaton.properties pls. Database's table can be generated automatically, İf you write `spring.jpa.hibernate.ddl-auto=create` on application.properties.
-- your database's table can create regularly when you wrote `spring.jpa.hibernate.ddl-auto=create` on application.properties
-##### for Referans how to learn spring technology. 
-```
-- https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
-- https://www.logicbig.com/                           - https://howtodoinjava.com/
-- https://o7planning.org/                             - https://www.concretepage.com/spring-boot/
-- https://memorynotfound.com/                         - https://www.dineshonjava.com/
+# Spring Boot Projects Collection
 
-``` 
-### 1 - spring-boot-HelloWorld
-how to run project. Look at application.properties where Port number is there. 
-``` 
-Links: 
-    http://localhost:3092/    http://localhost:3092/welcome
-```
-### 2 - spring-boot-view-JSP-File-1
-How to use and view jsp file on spring boot
-``` 
-Links: 
-http://localhost:8182/    http://localhost:8182/personels
-```
-### 3 - spring-boot-view-Error-Page
-How to use and view Error page on spring boot<br/>
-First, You have to add to `src/main/resources/public/error/(ErrorPage.html)` such as `404.html or 403.html` if you wanna see error page.<br/>
-if you write one of bottom links, you can't see error page as error.html
-``` 
-http://localhost:8182/    http://localhost:8182/personels
-``` 
-if you write one of bottom links, you can see error page as error.html
-``` 
-http://localhost:8182/deneme                           http://localhost:8182/asd        
-http://localhost:8182/asdqwe/121243dqwe?c=asldkwqe     http://localhost:8182/deneme.jsp
-```
-### 4 - springboot-(REST_API_QUERY) 
-###### (Static)
-how to use RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE and RequestMethod.GET<br/>
-you can experiment with JUNİT on PersonelClinicRestControllerTest.java  (src/test/java/com/javaegitimleri/app/web/) 
-```   
-You can try runnuing anymethods with run as -> Junit Test in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java. 
-Then you can look at changing data on localhost:8182/rest/personels
-``` 
-### 5 - springboot-with-h2-database (REST_API_QUERY)  (jdbc with h2 database)
-how to create schema, table and add data with jdbc in table. you can look src/main/resources/ data.sql & schema.sql.<br/>
-how to use h2 database with jdbc.
-``` 
-Also You can try runnuing createPersonelTest, deletePersonelTest methods with run as -> Junit Test 
-in src/test/java/com/javaegitimleri/app/web/PersonelClinicRestControllerTest.java.
-``` 
-### 6 - springboot-jpa-with-h2-database (REST_API_QUERY)
-how to use jpa with h2 database<br/>
-how to use @Transactional, @Id, @GeneratedValue, @Entity, @Table @Column
-### 7 - springboot-simple-security-example
-how to use login and logout procedure<br/>
-how to use specific login page <br/>
-how to use remember me for security login<br/>
-First you have to add spring-boot-starter-security dependency file in pom.xml. <br/>
-look at application.properties file in src/main/resources/...
-``` 
-#you can change username and password. then you can try login proccessing
-spring.security.user.name=celal
-spring.security.user.password=123456
-``` 
-### 8 - SpringJPA-PostgreSQL-Example
-first step
-Open pdAdmin 4, use SQL Editor and make a query to create customer table in database called Personels
-Also you can create any database called diffrent name.
-``` 
-CREATE TABLE customer(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    firstname VARCHAR(20),
-    lastname VARCHAR(20)
-);
-``` 
-second step
-``` 
-First you need to write localhost:8182/save
-Then you can try writing bottom any link
-localhost:8182/findall
-localhost:8182/findbyid?id=3  
-localhost:8182/findbylastname?lastname=Terim
-``` 
-### 9 - springboot-security-with-h2-example
-How to use login process<br/>
-Anybody has ROLE_EDITOR or ROLE_ADMIN can enter links called /rest/** and /actuator/** for `AUTHORIZATION`.Anybody only has ROL_USER can't enter links called /rest/** and /actuator/**
-- `links` -> `localhost:8182/rest/personels`, `localhost:8182/rest/personel/3`, `localhost:8182/rest/personel?fn=Celal`
-- `links` -> `localhost:8182/actuator/health`
-``` 
-INSERT INTO USERS VALUES('user1','{noop}12345',TRUE);
-INSERT INTO USERS VALUES('user2','{noop}secrett',TRUE);
-INSERT INTO USERS VALUES('celal','{noop}secret',TRUE);
-``` 
-you can write data below first-three sql queries instead of above sql queris in src/main/resources/data.sql
-```    
-INSERT INTO USERS VALUES('user1','{bcrypt}$2a$10$FMQOTEUiRN1L2MV2gfYas.MEDnLcEffuenRme5WdFgkwcuWA2jyhG',TRUE);
-INSERT INTO USERS VALUES('user2','{bcrypt}$2a$10$.qPu/z1bV0Lw5uSpv6YMKeiCUI4rsxfNY/HJJBgw9E7CYUULMW3CS',TRUE);
-INSERT INTO USERS VALUES('celal','{bcrypt}$2a$10$m9RM8vLgWvu/8Ig21HURG.IHIeFEie8CsKaGV1FeQ88bi27Xz4wJS',TRUE);
-``` 
-username and password will be same again when you changed first-three lines in src/main/resources/data.sql.<br/>
-for encrypted data you can look at PasswordEncoderTest.java class in src/test/com/javaegitimleri/ap/test
-for example (encrypted data) 
-- `12345` -> `{bcrypt}$2a$10$FMQOTEUiRN1L2MV2gfYas.MEDnLcEffuenRme5WdFgkwcuWA2jyhG`
-- `secrett` -> `{bcrypt}$2a$10$.qPu/z1bV0Lw5uSpv6YMKeiCUI4rsxfNY/HJJBgw9E7CYUULMW3CS`
-- `secret` -> `{bcrypt}$2a$10$m9RM8vLgWvu/8Ig21HURG.IHIeFEie8CsKaGV1FeQ88bi27Xz4wJS`
+This repository contains a collection of 32 small example projects built primarily with Spring Boot, showcasing various functionalities, integrations, and best practices. Each project is designed to demonstrate a specific concept or technology, providing a clear and concise example.
 
-### 10 - Spring-Boot-10-JPA-PostgreSQL-CRUD-RESTful Services-And-Jsp
-how to use postgresql with jpa for CRUD for RESTful and jsp file. `create, read, update, delete` <br/>
-Open pdAdmin 4, use SQL Editor and make a query to create customer table in database called Personels.Also you can create any database called diffrent name.
-``` 
-CREATE TABLE customer(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    firstname VARCHAR(20),
-    lastname VARCHAR(20)
-);
-``` 
-you can try below sample links.
-``` 
-localhost:8182/                 localhost:8182/customers          localhost:8182/customer/1
-localhost:8182/rest/customers   localhost:8182/rest/customer/1 
-``` 
-### 11 - Spring-Boot-11-SpringData-1-JPA-PostgreSQL
-how to use @OneToOne, @JoinColumn, @JsonIgnore for spring boot and data in multiple table.<br/>
-first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
-``` 
-CREATE TABLE customer(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    name VARCHAR(255),
-    email VARCHAR(255)
-);
+---
 
-CREATE TABLE details(
-    id BIGINT PRIMARY KEY  NOT NULL,
-    city VARCHAR(255),
-    country VARCHAR(255),
-    phone_number VARCHAR(255),
-    customeid BIGINT,
-    FOREIGN KEY (customerid) REFERENCES customer (id)
-);
-``` 
-second one : Write localhost:8182/insert to insert data on database. then write other link
-``` .  
-localhost:8182/details  localhost:8182/customers   localhost:8182/customers   localhost:8182/customer/{id}
-  localhost:8182/customerjson/{id}
-``` 
-### 12 - Spring-Boot-12-SpringData-2-JPA-PostgreSQL
-how to use @ManyToOne for spring boot and data in multiple table.<br/>
-how to use specific sql query with @Query<br/>
-first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
-``` 
-CREATE TABLE car(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    name VARCHAR(255),
-    model INTEGER
-);
-CREATE TABLE customer(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    name VARCHAR(255),
-    email VARCHAR(255)
-);
+### General Information
 
-CREATE TABLE book(
-    id BIGINT PRIMARY KEY  NOT NULL,
-    name VARCHAR(255),
-    customeid BIGINT,
-    FOREIGN KEY (customer_id) REFERENCES customer (id)
-);
-``` 
-second one : Write localhost:8182/insert to insert data on database.
-``` . 
-localhost:8182/books    localhost:8182/book/{id}   localhost:8182/customers   localhost:8182/customer/{id}
-``` 
-### 13 - Spring-Boot-13-SpringData-3-JPA-Hibernate-PostgreSQL
-how to use @Embeddable, @Embedded for Spring data on Spring Boot<br/>
-first one : create bottom table on any database called Users in pgAdmin 4.<br/> 
-if you change database's name. you can change.
-``` 
-CREATE TABLE car(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    name VARCHAR(255),
-    model INTEGER,
-    details VARCHAR(255)
-);
-``` 
-second one : First write localhost:8182/insert_car to insert data on database.
-``` . 
-localhost:8182/insert_car    
-``` 
-Then write other links such as 
-``` 
-for Post method on Postman                  localhost:8182/car
-for Put and Delete method on Postman        localhost:8182/car/{id}
-``` 
-Also write these links on Any Browser       
-``` 
-localhost:8182/car1/{id}                localhost:8182/car2/{id}
-localhost:8182/car_with_name/{name}     localhost:8182/car_with_model/{model}
-``` 
-### 14 - Spring-Boot-14-SpringData-4-Thymeleaf-JPA-PostgreSQL
-how to use @OneToMany and @ManyToOne for spring boot and data in multiple table.<br/>
-how to use Thymeleaf with jpa hibernate on spring boot.<br/>
-first one : create bottom table on any database called Users in pgAdmin 4.<br/> if you change database's name. you can change.
-``` 
-CREATE TABLE customer(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    name VARCHAR(255),
-    email VARCHAR(255),
-    enabled boolen,
-    password VARCHAR(255)
-);
-CREATE TABLE customer_role(
-    id BIGINT PRIMARY KEY  NOT NULL,
-    role_name VARCHAR(255),
-    customeid BIGINT,
-    FOREIGN KEY (customer_id) REFERENCES customer (id)
-);
-``` 
-second one : Write localhost:8182/rest/insert to insert data on database.
-``` . 
-localhost:8182/customers    localhost:8182/rest/customers   localhost:8182/rest/cust
-``` 
-### 15 - Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL (with Static user and password)
-How to use spring security and @Secured @Query with static user and password datas on spring boot and WebSecurityConfigurerAdapter.
-- How will database's table be generated automatically. Look at this applicaton.properties pls. Database's table can be generated automatically, İf you write `spring.jpa.hibernate.ddl-auto=create` on application.properties on line 15. 
-- First you must run this project. database tables will be generated automatically after PgAdmin4 open. <br/>
-but table is here
-``` 
-CREATE TABLE customer(
-    id BIGINT PRIMARY KEY     NOT NULL,
-    name VARCHAR(255),
-    email VARCHAR(255),
-    enabled boolen,
-    password VARCHAR(255)
-);
-CREATE TABLE customer_role(
-    id BIGINT PRIMARY KEY  NOT NULL,
-    role_name VARCHAR(255),
-    customeid BIGINT,
-    FOREIGN KEY (customer_id) REFERENCES customer (id)
-);
-``` 
-How to use spring security and @Secured("..."). look at this `webConfigurationClass.java` on Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL/src/main/java/com/example/demo/   <br>
-You can use user and password to login when you run this project
-`webConfigurationClass.java`
-``` 
-  USER     / PASSWORD     / ROLE
--------------------------------------------
-- admin    / admin        / "ADMIN"
-- celal    / celal        / "USER"
-- arda     / arda         / "EDITOR"
-``` 
-Accessing links for roles
-``` 
-Permitall links
-localhost:8182/userinfo/
+-   **Port Number Configuration**: To change the default port number for any Spring Boot application, you can modify the `server.port` property in the `application.properties` file located in `src/main/resources/application.properties`. For example:
+    ```properties
+    server.port=8182
+    ```
+-   **Database Schema Generation**: For projects utilizing JPA and Hibernate, you can configure automatic database table generation by setting `spring.jpa.hibernate.ddl-auto` in `application.properties`.
+    -   `create`: Tables will be created from scratch every time the application starts.
+    -   `update`: Existing tables will be updated, and new tables will be created if they don't exist, preserving existing data. It's recommended to use `update` for persistence after initial setup.
 
-for ADMIN, ADMIN can access these links
-localhost:8182/rest/customers/
+##### Useful References for Spring Technologies:
 
-for USER, USER can acces these links
-localhost:8182/rest/customers/      localhost:8182/rest/customer-by-email/{email}/
-localhost:8182/customer/{email}/    localhost:8182/rest/customerbyname/{name]   
 
-for EDITOR, EDITOR can acces these links
-localhost:8182/rest/cust/   localhost:8182/rest/customer-by-name/{name}/
-``` 
 
-### 16 - Spring-Boot-16-SpringData-5-Thymeleaf-JPA-PostgreSQL
-how to use @ManyToMany and @JoinTable for spring boot and data in multiple table.<br/>
-- You had bettet to look at this applicaton.properties pls. Database's table can be generated automatically, İf you write `spring.jpa.hibernate.ddl-auto=create` on application.properties.
-- your database's table can create regularly when you wrote `spring.jpa.hibernate.ddl-auto=create` on application.properties
-``` 
-CREATE TABLE student(
-    id INTEGER PRIMARY KEY     NOT NULL,
-    name VARCHAR(255),
-);
-CREATE TABLE subject(
-    id INTEGER PRIMARY KEY  NOT NULL,
-    name VARCHAR(255)
-);
-``` 
-### 17 - Spring-Boot-17-SpringSecurity-Jpa-PostgreSQL
-How to use registering and login on spring boot and security with mysql.
-- You had bettet to look at this applicaton.properties pls. Database's table can be generated automatically, İf you write `spring.jpa.hibernate.ddl-auto=create` on application.properties.
-- your database's table can create regularly when you wrote `spring.jpa.hibernate.ddl-auto=create` on application.properties
-- if you wanna to watch the video as result of this project you can click and watch on youtube
-[![Watch the video](https://www.youtube.com/watch?v=VAG2s3j5L3E&feature=youtu.be)](https://www.youtube.com/watch?v=VAG2s3j5L3E&feature=youtu.be)
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+https://www.logicbig.com/ - https://howtodoinjava.com/
+https://o7planning.org/ - https://www.concretepage.com/spring-boot/
+https://memorynotfound.com/ - https://www.dineshonjava.com/
+---
 
-##### Using Tools & Technologies
-``` 
-- Spring Boot
-- Spring Security
-- Jpa, Hibernate
-- Mysql
-- Thymeleaf
-- Bootstrap
-``` 
-### 23 - Spring-Boot-23-Base-Model-Inheritance PostgreSQL
-- How to use Base Model Inheritance in Multible model with PostgreSQL
-- how to use @Inheritance(....) Annotations with One to many relations
-- Look at link : 
-- [![Look at this class: Transaction](https://github.com/celalaygar/Spring-Boot-2/blob/master/Spring-Boot-23-Base-Model-Inheritance/src/main/java/com/eteration/simplebanking/model/Transaction.java)
-``` 
-    @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-```  
-##### Using Tools & Technologies
-``` 
-- Spring Boot
-- Jpa, Hibernate
-- PostgreSQL
-``` 
+### Project Descriptions
+
+#### 1 - `spring-boot-HelloWorld`
+-   **Description**: A foundational "Hello World" example demonstrating the absolute basics of setting up and running a Spring Boot application.
+-   **Technologies**: Spring Boot.
+-   **Database**: PostgreSQL (default).
+-   **Links**: `http://localhost:3092/`, `http://localhost:3092/welcome`
+
+#### 2 - `spring-boot-view-JSP-File-1`
+-   **Description**: Demonstrates how to integrate and render JavaServer Pages (JSP) as view templates within a Spring Boot application.
+-   **Technologies**: Spring Boot, JSP.
+-   **Database**: PostgreSQL (default).
+-   **Links**: `http://localhost:8182/`, `http://localhost:8182/personels`
+
+#### 3 - `spring-boot-view-Error-Page`
+-   **Description**: Shows how to implement custom error pages (e.g., 404, 403) in a Spring Boot application by placing HTML files in `src/main/resources/public/error/`.
+-   **Technologies**: Spring Boot, HTML.
+-   **Database**: PostgreSQL (default).
+-   **Usage**: Accessing non-existent paths like `http://localhost:8182/deneme` will display the custom error page.
+
+#### 4 - `springboot-(REST_API_QUERY)`
+-   **Description**: A static REST API example demonstrating basic HTTP methods (GET, POST, PUT, DELETE) for CRUD operations. Includes JUnit tests for API interaction.
+-   **Technologies**: Spring Boot, REST API, JUnit.
+-   **Database**: PostgreSQL (default).
+-   **Usage**: Run `PersonelClinicRestControllerTest.java` for testing. Data changes can be observed at `localhost:8182/rest/personels`.
+
+#### 5 - `springboot-with-h2-database(REST_API_QUERY)`
+-   **Description**: Demonstrates using JDBC with an in-memory H2 database. Includes examples of creating schemas, tables, and inserting data using `data.sql` and `schema.sql`.
+-   **Technologies**: Spring Boot, JDBC, H2 Database, REST API.
+-   **Database**: H2.
+-   **Usage**: Examine `src/main/resources/data.sql` & `schema.sql`. Run `createPersonelTest`, `deletePersonelTest` in `PersonelClinicRestControllerTest.java`.
+
+#### 6 - `springboot-jpa-with-h2-database (REST_API_QUERY)`
+-   **Description**: Illustrates the integration of JPA (Java Persistence API) with an H2 in-memory database for data persistence. Focuses on core JPA annotations like `@Transactional`, `@Id`, `@GeneratedValue`, `@Entity`, `@Table`, and `@Column`.
+-   **Technologies**: Spring Boot, JPA, H2 Database, REST API.
+-   **Database**: H2.
+
+#### 7 - `springboot-simple-security-example`
+-   **Description**: A basic Spring Security example showcasing login, logout, custom login pages, and "remember me" functionality with static user credentials defined in `application.properties`.
+-   **Technologies**: Spring Boot, Spring Security.
+-   **Database**: PostgreSQL (default).
+-   **Configuration**: User credentials can be changed in `application.properties`.
+
+#### 8 - `SpringJPA-PostgreSQL-Example`
+-   **Description**: Demonstrates basic CRUD (Create, Read, Update, Delete) operations using JPA with a PostgreSQL database. Includes instructions for setting up the `customer` table in pgAdmin 4.
+-   **Technologies**: Spring Boot, JPA, PostgreSQL.
+-   **Database**: PostgreSQL.
+-   **Usage**: First, `localhost:8182/save` to insert data, then `localhost:8182/findall`, `localhost:8182/findbyid?id=3`, `localhost:8182/findbylastname?lastname=Terim`.
+
+#### 9 - `springboot-security-with-h2-example`
+-   **Description**: An example of role-based authorization using Spring Security with an H2 database. Different roles (ROLE_EDITOR, ROLE_ADMIN, ROLE_USER) have varying access levels to specific endpoints. Shows both plaintext and bcrypt-encrypted passwords.
+-   **Technologies**: Spring Boot, Spring Security, H2 Database, Role-Based Authorization, Bcrypt.
+-   **Database**: H2.
+-   **Configuration**: User roles and passwords are defined in `src/main/resources/data.sql`. Includes a `PasswordEncoderTest.java` for generating encrypted passwords.
+
+#### 10 - `Spring-Boot-10-JPA-PostgreSQL-CRUD-RESTful Services-And-Jsp`
+-   **Description**: Combines JPA, PostgreSQL, RESTful services, and JSP for a comprehensive CRUD application. Provides both REST endpoints and JSP views for managing data.
+-   **Technologies**: Spring Boot, JPA, PostgreSQL, REST API, JSP.
+-   **Database**: PostgreSQL.
+-   **Usage**: `localhost:8182/`, `localhost:8182/customers`, `localhost:8182/customer/1`, `localhost:8182/rest/customers`, `localhost:8182/rest/customer/1`.
+
+#### 11 - `Spring-Boot-11-SpringData-1-JPA-PostgreSQL`
+-   **Description**: Focuses on advanced JPA mappings, specifically `@OneToOne` relationships, `@JoinColumn`, and `@JsonIgnore` annotations, demonstrating data handling across multiple tables in PostgreSQL.
+-   **Technologies**: Spring Boot, Spring Data JPA, PostgreSQL, `@OneToOne`, `@JoinColumn`, `@JsonIgnore`.
+-   **Database**: PostgreSQL.
+-   **Usage**: `localhost:8182/insert` to populate data. Then `localhost:8182/details`, `localhost:8182/customers`, `localhost:8182/customer/{id}`, `localhost:8182/customerjson/{id}`.
+
+#### 12 - `Spring-Boot-12-SpringData-2-JPA-PostgreSQL`
+-   **Description**: Explores `@ManyToOne` relationships in Spring Data JPA with PostgreSQL, along with the use of `@Query` annotation for custom SQL queries.
+-   **Technologies**: Spring Boot, Spring Data JPA, PostgreSQL, `@ManyToOne`, `@Query`.
+-   **Database**: PostgreSQL.
+-   **Usage**: `localhost:8182/insert` to populate data. Then `localhost:8182/books`, `localhost:8182/book/{id}`, `localhost:8182/customers`, `localhost:8182/customer/{id}`.
+
+#### 13 - `Spring-Boot-13-SpringData-3-JPA-Hibernate-PostgreSQL`
+-   **Description**: Demonstrates the use of `@Embeddable` and `@Embedded` annotations in Spring Data JPA with Hibernate and PostgreSQL, for embedding complex types within entities.
+-   **Technologies**: Spring Boot, Spring Data JPA, Hibernate, PostgreSQL, `@Embeddable`, `@Embedded`.
+-   **Database**: PostgreSQL.
+-   **Usage**: `localhost:8182/insert_car` to insert data. REST operations via Postman (`localhost:8182/car` for POST, `localhost:8182/car/{id}` for PUT/DELETE). Browser links: `localhost:8182/car1/{id}`, `localhost:8182/car2/{id}`, `localhost:8182/car_with_name/{name}`, `localhost:8182/car_with_model/{model}`.
+
+#### 14 - `Spring-Boot-14-SpringData-4-Thymeleaf-JPA-PostgreSQL`
+-   **Description**: Integrates Thymeleaf with Spring Data JPA and PostgreSQL, showcasing `@OneToMany` and `@ManyToOne` relationships in a web application.
+-   **Technologies**: Spring Boot, Spring Data JPA, Thymeleaf, PostgreSQL, `@OneToMany`, `@ManyToOne`.
+-   **Database**: PostgreSQL.
+-   **Usage**: `localhost:8182/rest/insert` to populate data. Then `localhost:8182/customers`, `localhost:8182/rest/customers`, `localhost:8182/rest/cust`.
+
+#### 15 - `Spring-Boot-15-SpringSecurity-(Simple)-JPA-PostgreSQL`
+-   **Description**: A simple Spring Security example with JPA and PostgreSQL, demonstrating role-based access control using `@Secured` annotation and static user credentials defined in `webConfigurationClass.java`.
+-   **Technologies**: Spring Boot, Spring Security, JPA, PostgreSQL, `@Secured`.
+-   **Database**: PostgreSQL.
+-   **User Credentials**:
+    -   `admin / admin / ADMIN`
+    -   `celal / celal / USER`
+    -   `arda / arda / EDITOR`
+-   **Access Links**:
+    -   `PermitAll`: `localhost:8182/userinfo/`
+    -   `ADMIN`: `localhost:8182/rest/customers/`
+    -   `USER`: `localhost:8182/rest/customers/`, `localhost:8182/rest/customer-by-email/{email}/`, `localhost:8182/customer/{email}/`, `localhost:8182/rest/customerbyname/{name}`
+    -   `EDITOR`: `localhost:8182/rest/cust/`, `localhost:8182/rest/customer-by-name/{name}/`
+
+#### 16 - `Spring-Boot-16-SpringData-5-Thymeleaf-JPA-PostgreSQL`
+-   **Description**: Focuses on `@ManyToMany` relationships and `@JoinTable` annotation in Spring Data JPA with Thymeleaf and PostgreSQL, demonstrating how to handle many-to-many associations between entities.
+-   **Technologies**: Spring Boot, Spring Data JPA, Thymeleaf, PostgreSQL, `@ManyToMany`, `@JoinTable`.
+-   **Database**: PostgreSQL.
+
+#### 17 - `Spring-Boot-17-SpringSecurity-Jpa-PostgreSQL`
+-   **Description**: A comprehensive example of user registration and login functionality using Spring Security with JPA and PostgreSQL. Includes a video demonstration.
+-   **Technologies**: Spring Boot, Spring Security, JPA, Hibernate, PostgreSQL, Thymeleaf, Bootstrap.
+-   **Database**: PostgreSQL.
+-   **Video**: [![Watch the video](https://img.youtube.com/vi/VAG2s3j5L3E/hqdefault.jpg)](https://www.youtube.com/watch?v=VAG2s3j5L3E&feature=youtu.be)
+
+#### 18 - `Spring-Boot-18-Mongodb`
+-   **Description**: Demonstrates how to integrate and use MongoDB as the NoSQL database for a Spring Boot application. Covers basic CRUD operations with MongoDB.
+-   **Technologies**: Spring Boot, MongoDB.
+-   **Database**: MongoDB.
+
+#### 19 - `Spring-Boot-19-RabbitMQ`
+-   **Description**: An example showcasing message queuing with RabbitMQ in a Spring Boot application. Demonstrates producer and consumer patterns for asynchronous communication.
+-   **Technologies**: Spring Boot, RabbitMQ.
+-   **Database**: PostgreSQL (default).
+
+#### 20 - `Spring-Boot-20-React-JWT-without-Redux`
+-   **Description**: A full-stack application demonstrating JWT (JSON Web Token) based authentication with a Spring Boot backend and a React.js frontend, without using Redux for state management.
+-   **Technologies**: Spring Boot, React.js, JWT, REST API.
+-   **Database**: PostgreSQL (default).
+
+#### 21 - `Spring-Boot-21-React-JWT-with-Redux`
+-   **Description**: A full-stack application similar to project 20, but integrating Redux for centralized state management in the React.js frontend, along with JWT authentication and a Spring Boot backend.
+-   **Technologies**: Spring Boot, React.js, Redux, JWT, REST API.
+-   **Database**: PostgreSQL (default).
+
+#### 22 - `Spring-Boot-22-Role-Based-JWT`
+-   **Description**: Extends JWT authentication to implement role-based access control. Demonstrates how to issue and validate JWTs with user roles, and secure endpoints based on those roles.
+-   **Technologies**: Spring Boot, JWT, Role-Based Security, REST API.
+-   **Database**: PostgreSQL (default).
+
+#### 23 - `Spring-Boot-23-Base-Model-Inheritance`
+-   **Description**: Illustrates the concept of base model inheritance in JPA with PostgreSQL, specifically using `@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)` to manage common fields across multiple entities.
+-   **Technologies**: Spring Boot, JPA, PostgreSQL, Inheritance.
+-   **Database**: PostgreSQL.
+-   **Reference**: See `Transaction.java` for an example of the inheritance strategy.
+
+#### 24 - `Spring-Boot-24-Unit-Test`
+-   **Description**: Provides examples of writing unit tests for Spring Boot applications, covering various components like services, repositories, and controllers, using JUnit and Mockito.
+-   **Technologies**: Spring Boot, JUnit, Mockito.
+-   **Database**: PostgreSQL (default).
+
+#### 25 - `Spring-Boot-25-Elastic-Search`
+-   **Description**: Demonstrates integration of Elastic Search with a Spring Boot application for powerful full-text search and analytical capabilities.
+-   **Technologies**: Spring Boot, Elastic Search.
+-   **Database**: PostgreSQL (default, for primary data if any).
+
+#### 26 - `Spring-Boot-26-Kafka-Producer-Consuöer-Scheduled`
+-   **Description**: Showcases the implementation of Kafka producers and consumers in Spring Boot for real-time data streaming, along with scheduled tasks for automated operations.
+-   **Technologies**: Spring Boot, Apache Kafka, Scheduled Tasks.
+-   **Database**: PostgreSQL (default).
+
+#### 27 - `Spring-Boot-27-PostgreSQL-Trigger-Java-Listener`
+-   **Description**: Explores advanced PostgreSQL features by demonstrating how to create and use database triggers, and how to listen for these trigger events from a Java Spring Boot application.
+-   **Technologies**: Spring Boot, PostgreSQL, Database Triggers, Java Listeners.
+-   **Database**: PostgreSQL.
+
+#### 28 - `Spring-Boot-28-ReactJS-WebSocket`
+-   **Description**: A real-time communication example using WebSockets with a Spring Boot backend and a React.js frontend. Ideal for chat applications or live data updates.
+-   **Technologies**: Spring Boot, React.js, WebSockets.
+-   **Database**: PostgreSQL (default).
+
+#### 29 - `Spring-Boot-29-Logging`
+-   **Description**: Focuses on configuring and utilizing logging frameworks (e.g., Logback, Log4j2) in a Spring Boot application, demonstrating different log levels and output destinations.
+-   **Technologies**: Spring Boot, Logging (Logback/Log4j2).
+-   **Database**: PostgreSQL (default).
+
+#### 30 - `Spring-Boot-30-BaseRequest-BaseEntity-BaseResponse`
+-   **Description**: Implements common architectural patterns using base classes for requests, entities, and responses to promote code reusability and maintainability in a Spring Boot application.
+-   **Technologies**: Spring Boot, Design Patterns.
+-   **Database**: PostgreSQL (default).
+
+#### 31 - `Spring-Boot-31-WebFlux-Security-MongoDB-RateLimit-Configuration`
+-   **Description**: A reactive Spring Boot application using WebFlux, incorporating Spring Security for authentication/authorization, MongoDB for data storage, and implementing rate limiting for API protection.
+-   **Technologies**: Spring Boot WebFlux, Spring Security, MongoDB, Rate Limiting.
+-   **Database**: MongoDB.
+
+#### 32 - `Spring-Boot-32-Security-WebFlux-Logging-RateLimit-MongoDB`
+-   **Description**: A comprehensive reactive application built with Spring Boot WebFlux, featuring Spring Security, robust logging, API rate limiting, and MongoDB persistence.
+-   **Technologies**: Spring Boot WebFlux, Spring Security, Logging, Rate Limiting, MongoDB.
+-   **Database**: MongoDB.
+
 
