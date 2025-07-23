@@ -201,7 +201,7 @@ https://www.dineshonjava.com/
 -   **Veritabanı**: PostgreSQL (varsayılan).
 
 #### 31 - `Spring-Boot-31-WebFlux-Security-MongoDB-RateLimit-Configuration`
--   **Açıklama**: WebFlux kullanan reaktif bir Spring Boot uygulaması, kimlik doğrulama/yetkilendirme için Spring Security'yi, veri depolama için MongoDB'yi içerir ve API koruması için hız sınırlaması uygular.
+-   **Açıklama**: WebFlux kullanan reaktif bir Spring Boot uygulaması, kimlik doğrulama/yetkilendirme için Spring Security'yi, veri depolama için MongoDB'yi içerir ve API koruması için hız sınırlaması uygular, Her request ve response (body, headers ve tüm parametreleriyle beraber) mongodb ye loglanır.
 -   **Teknolojiler**: Spring Boot WebFlux, Spring Security, MongoDB, Hız Sınırlama.
 -   **Veritabanı**: MongoDB.
 
