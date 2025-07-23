@@ -204,7 +204,7 @@ https://www.dineshonjava.com/
 -   **Database**: PostgreSQL (default).
 
 #### 31 - `Spring-Boot-31-WebFlux-Security-MongoDB-RateLimit-Configuration`
--   **Description**: A reactive Spring Boot application using WebFlux, incorporating Spring Security for authentication/authorization, MongoDB for data storage, and implementing rate limiting for API protection.
+-   **Description**: A reactive Spring Boot application using WebFlux, incorporating Spring Security for authentication/authorization, MongoDB for data storage, implementing rate limiting for API protection., Logging to Mongo Db per request and response (headers,body, all of parameters).
 -   **Technologies**: Spring Boot WebFlux, Spring Security, MongoDB, Rate Limiting.
 -   **Database**: MongoDB.
 
