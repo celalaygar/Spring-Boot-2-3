@@ -11,7 +11,7 @@
     "bootstrap": "^5.0.0",
     "i18next": "^19.7.0",
     "jquery": "^3.5.1",
-    "moment": "^2.29.0",
+    "moment": "^2.31.0",
     "node-sass": "^9.0.0",
     "react": "^16.13.1",
     "react-datepicker": "^3.2.2",
